@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap");
 /*----------SETUP----------*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&family=Josefin+Sans:wght@700&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -247,9 +247,46 @@ html {
   padding: 0 auto;
   margin: 0 auto;
   font-size: 120%;
-  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
 }
 
 h1 {
+  color: red;
+}
+
+ul {
+  padding-left: 25px;
+}
+
+.sidebarNavigation {
+  width: 100px;
+  height: 100vh;
+  position: fixed;
+}
+.sidebarNavigation .logoContainer {
+  background-color: #292f40;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sidebarNavigation .logoContainer img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sidebarNavigation .sideNavContainer {
+  height: 100%;
+  background-color: #191d28;
+}
+.sidebarNavigation .sideNavIcons ul li p {
   color: red;
 }
