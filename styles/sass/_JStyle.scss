@@ -1,0 +1,38 @@
+.hideSlideout{
+    visibility:none;
+    left: -120%;
+}
+.showSlideout{
+    visibility: visible;
+    left: 0%;
+}
+
+.emptyCircle{
+    span{
+        .fas.fa-bars{
+            color:$colorYellow;
+        }
+        .far.fa-circle{
+            // color:$colorYellow;
+            color:$colorYellow;
+        }
+        .fas.fa-circle{
+            color:$colorDarkBlue;
+            // font-size: 50px;
+        }
+    }
+}
+.fullCircle{
+    span{
+        .fas.fa-bars{
+            color:$colorDarkBlue;
+        }
+        .far.fa-circle{
+            color:$colorYellow;
+        }
+        .fas.fa-circle{
+            color:$colorYellow;
+            // font-size: 50px;
+        }
+    }
+}

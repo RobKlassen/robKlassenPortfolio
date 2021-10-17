@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/fd2248e09b.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
@@ -13,42 +14,47 @@
         <div class="logoContainer">
             <img src="./styles/assets/rkcodelogo9.png" alt="">
         </div>
-        <div class="sideNavContainer">
-            <p>fontawesome hamburger</p>
+        <div class="sideNavButton emptyCircle" id="sideNavButton">
+            <span class="fa-stack">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-circle fa-stack-1x"></i>
+                <i class="fas fa-bars fa-stack-1x"></i>
+                <!-- <i class="fas fa-home fa-stack-1x"></i> -->
+            </span>
         </div>
         <div class="sideNavIcons">
             <ul>
                 <li>
-                    <p>gh</p>
+                    <i class="fab fa-github-square"></i>
                 </li>
                 <li>
-                    <p>linkedin</p>
+                    <i class="fab fa-linkedin"></i>
                 </li>
                 <li>
-                    <p>medium?</p>
+                    <i class="fab fa-medium"></i>
                 </li>
                 <li>
-                    <p>email</p>
+                    <i class="far fa-envelope"></i>
                 </li>
-            </ul>
-        </div>
-        <div class="sideNavSlideout">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Projects
-                    <ul>
-                        <li>Project 1</li>
-                        <li>Project 2</li>
-                        <li>Project 3</li>
-                        <li>Project 4</li>
-                    </ul>
-                </li>
-                <li>Contact</li>
             </ul>
         </div>
     </nav>
+    <section class="sideNavSlideout hideSlideout" id="sideNavSlideout">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Skills</li>
+            <li>Projects
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <li>Project 3</li>
+                    <li>Project 4</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </section>
 
     <nav class="pageLocationNavigation">
         <div class="positionMarker">
@@ -274,7 +280,8 @@
     <footer>
         <p>Created by Rob Klassen - 2021</p>
         <p>Juno College of Technology - something something bootcamp</p>
-        <p>Design by marveltheme - Themeforest.com</p> 
+        <p>Design by marveltheme - Themeforest.com</p>
+        <p>Slideout background SVG from www.heropatterns.com/</p> 
     </footer>
 
 <script src="scripts.js"></script>
