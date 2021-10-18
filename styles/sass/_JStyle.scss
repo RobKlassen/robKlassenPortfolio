@@ -1,6 +1,8 @@
+//SLIDEOUT STYLING
+
 .hideSlideout{
     visibility:none;
-    left: -120%;
+    left: -150%;
 }
 .showSlideout{
     visibility: visible;
@@ -34,5 +36,29 @@
             color:$colorYellow;
             // font-size: 50px;
         }
+    }
+}
+
+// SLIDEOUT NAV PROJECT DROPDOWN STYLING
+
+.slideoutDropdownHidden{
+    li .slideoutProjectList{
+        li{
+            
+        }
+    }
+    .sideNavSlideoutContact{
+        
+    }
+}
+
+.slideoutDropdownRevealed{
+    li .slideoutProjectList{
+        li{
+            display:block;
+        }
+    }
+    .sideNavSlideoutContact{
+        // position: relative;
     }
 }

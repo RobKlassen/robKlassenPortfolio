@@ -40,19 +40,19 @@
         </div>
     </nav>
     <section class="sideNavSlideout hideSlideout" id="sideNavSlideout">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects
-                <ul>
-                    <li>Project 1</li>
-                    <li>Project 2</li>
-                    <li>Project 3</li>
-                    <li>Project 4</li>
+        <ul class="slideoutDropdownHidden">
+            <li><a href="#">Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Skills</a></li>
+            <li id="projectDropdown"><a>Projects</a>
+                <ul class="slideoutProjectList" id="slideoutProjectList">
+                    <li><a>Project 1</a></li>
+                    <li><a>Project 2</a></li>
+                    <li><a>Project 3</a></li>
+                    <li><a>Project 4</a></li>
                 </ul>
             </li>
-            <li>Contact</li>
+            <li class="sideNavSlideoutContact" id="sideNavSlideoutContact"><a>Contact</a></li>
         </ul>
     </section>
 
@@ -282,6 +282,7 @@
         <p>Juno College of Technology - something something bootcamp</p>
         <p>Design by marveltheme - Themeforest.com</p>
         <p>Slideout background SVG from www.heropatterns.com/</p> 
+        <p>clip path from https://bennettfeely.com/clippy/</p>
     </footer>
 
 <script src="scripts.js"></script>
