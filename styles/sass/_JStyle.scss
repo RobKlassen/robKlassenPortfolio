@@ -41,24 +41,13 @@
 
 // SLIDEOUT NAV PROJECT DROPDOWN STYLING
 
-.slideoutDropdownHidden{
-    li .slideoutProjectList{
-        li{
-            
-        }
-    }
-    .sideNavSlideoutContact{
-        
-    }
+.invisible{
+    position:absolute;
+    top:-500px;
+    // display:none;
 }
 
-.slideoutDropdownRevealed{
-    li .slideoutProjectList{
-        li{
-            display:block;
-        }
-    }
-    .sideNavSlideoutContact{
-        // position: relative;
-    }
+.visible{
+    position: relative;
+    top:0;
 }

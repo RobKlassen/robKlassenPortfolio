@@ -40,12 +40,12 @@
         </div>
     </nav>
     <section class="sideNavSlideout hideSlideout" id="sideNavSlideout">
-        <ul class="slideoutDropdownHidden">
+        <ul class="slideoutMenu" id="slideoutMenu">
             <li><a href="#">Home</a></li>
             <li><a>About</a></li>
             <li><a>Skills</a></li>
             <li id="projectDropdown"><a>Projects</a>
-                <ul class="slideoutProjectList" id="slideoutProjectList">
+                <ul class="slideoutProjectList invisible" id="slideoutProjectList">
                     <li><a>Project 1</a></li>
                     <li><a>Project 2</a></li>
                     <li><a>Project 3</a></li>
@@ -53,6 +53,38 @@
                 </ul>
             </li>
             <li class="sideNavSlideoutContact" id="sideNavSlideoutContact"><a>Contact</a></li>
+            <li><a>Recursive Menu Test</a>
+                <ul class="invisible">
+                    <li><a>menu item 1</a>
+                        <ul class="invisible">
+                            <li><a>submenu item 1</a></li>
+                            <li><a>submenu item 2</a></li>
+                            <li><a>submenu item 2</a></li>
+                        </ul>                    
+                    </li>
+                    <li><a>menu item 2</a>
+                        <ul class="invisible">
+                            <li><a>submenu item 1</a></li>
+                            <li><a>submenu item 2</a></li>
+                            <li><a>submenu item 2</a></li>
+                        </ul>                    
+                    </li>
+                    <li><a>menu item 3</a>
+                        <ul class="invisible">
+                            <li><a>submenu item 1</a></li>
+                            <li><a>submenu item 2</a></li>
+                            <li><a>submenu item 2</a></li>
+                        </ul>                    
+                    </li>
+                    <li><a>menu item 4</a>
+                        <ul class="invisible">
+                            <li><a>submenu item 1</a></li>
+                            <li><a>submenu item 2</a></li>
+                            <li><a>submenu item 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </section>
 
