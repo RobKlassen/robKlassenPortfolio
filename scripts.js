@@ -9,51 +9,83 @@ const app = {};
 app.toggleClasses = function(target, classToAdd, classToRemove){
     target.classList.add(classToAdd);
     target.classList.remove(classToRemove);
-    console.log("removed", classToRemove);
+}
+
+app.removeClassFromSection = function(){
+    const slideoutmenu = document.querySelector('.slideoutMenu');
+    const removeClassSelector = slideoutmenu.querySelectorAll(".nestedMenu > ul");
+    // const removeClassSelectorLower = slideoutmenu.querySelectorAll("ul > li");
+    removeClassSelector.forEach(element =>{
+        element.classList.remove("nestedMenu");
+        app.toggleClasses(element, "invisible", "visible");
+    })
+    // removeClassSelectorLower.forEach(element=>{
+    //     element.classList.remove("nestedMenu");
+    //     app.toggleClasses(element, "invisible", "visible");
+    // })
 }
 
 app.projectListDropdownHandler = function(){
     const slideoutMenu = document.querySelector("#slideoutMenu");
-    const menuItem = slideoutMenu.children;
-
 
     //RECURSIVE SOLUTION
-    const findChildren = function(parent){
-        for (const child of parent){
-            const count = child.children.length;
+    const findChildMenus = function(parent){
+   
 
-            if(count >= 2){
-                findChildren(child.children);
-                let localToggle = false;
-                child.addEventListener('click', function(){
-                    const localChillin = child.children;
-                    if (localToggle === false){
-                        app.toggleClasses(localChillin, "visible", "invisible");
-                        localToggle = true;
-                    } else if (localToggle === true) {
-                        app.toggleClasses(localChillin, "invisible", "visible");
-                        localToggle = false;
-                    }
 
-                    // console.log(child.children[1]);
-                    // localChillin.classList.add("visible");
-                    // localChillin.classList.remove("invisible");
-                })
-            } else {
-                child.addEventListener('click', function(){
-                    console.log("you clicked a child");
-                    // const localChillin = child.children[1];
-                    // localChillin.classList.remove("invisible");
-                    // localChillin.classList.add("visible");  
-                });
+
+        const collapseAllMenus = function(){
+            const allOtherMenus = parent.querySelectorAll('ul');
+            for (let i=0; i < allOtherMenus.length; i++){
+                const otherMenu = allOtherMenus[i];
+                app.toggleClasses(otherMenu, "invisible", "visible");
             }
         }
+
+
+
+        
+        const checkChildCountOfType = function(subparent, ofType){
+            const menuCount = subparent.querySelectorAll(ofType);
+            if (menuCount.length >= 1){
+                return subparent.hasMenu = true;
+            } else {
+                return subparent.hasMenu = false;
+            }
+        }
+        checkChildCountOfType(parent, 'ul');
+
+        if (parent.hasMenu === true){
+            const menus = parent.querySelectorAll('ul');
+            for (const menu of menus){
+                
+                let menuparent = menu.parentElement;
+
+                menuparent.addEventListener('click', function(){
+                    console.log(this);
+
+
+                    collapseAllMenus();
+                    menuparent.classList.add("nestedMenu");
+
+                    //THIS LINE OF CODE WHAT THE HECK!!!!!!!! the . did it.
+                    const submenus = menuparent.querySelectorAll('.nestedMenu > ul');
+                    submenus.forEach(element => {
+                        app.toggleClasses(element, "visible", "invisible");
+                    });
+                    app.toggleClasses(menu, "visible", "invisible");
+                })
+            }
+            for (let child of parent.children){
+                findChildMenus(child);
+            }
+        } else {
+            parent.addEventListener('click', function(){
+                //bedrock level stuff to happen
+            })
+        }
     }
-    findChildren(menuItem);
-    
-
-
-
+    findChildMenus(slideoutMenu);
 }
 
 
@@ -64,11 +96,13 @@ app.slideOutHandler = function(){
     const slideoutPage = document.querySelector("#sideNavSlideout");
 
     slideoutButton.addEventListener('click', function(){
-        console.log("you clicked it", slideOutToggle);
+        // console.log("you clicked it", slideOutToggle);
         slideOutToggle = !slideOutToggle
         if (slideOutToggle === true){
             app.toggleClasses(slideoutPage, "showSlideout", "hideSlideout");
             app.toggleClasses(slideoutButton, "fullCircle", "emptyCircle");
+            //this will remove the dropdown visibility properly
+            app.removeClassFromSection();
         } else if (slideOutToggle === false) {
             app.toggleClasses(slideoutPage, "hideSlideout", "showSlideout");
             app.toggleClasses(slideoutButton,"emptyCircle", "fullCircle");
@@ -85,6 +119,7 @@ app.slideOutHandler = function(){
 
 
 app.init = function(){
+    // app.removeClassSelector();
     app.slideOutHandler();
     app.projectListDropdownHandler();
 }

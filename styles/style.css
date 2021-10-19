@@ -447,11 +447,9 @@ a {
 }
 
 .invisible {
-  position: absolute;
-  top: -500px;
+  display: none;
 }
 
 .visible {
-  position: relative;
-  top: 0;
+  display: block;
 }
