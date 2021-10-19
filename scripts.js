@@ -13,105 +13,90 @@ app.toggleClasses = function(target, classToAdd, classToRemove){
 
 app.removeClassFromSection = function(){
     const slideoutmenu = document.querySelector('.slideoutMenu');
-    const removeClassSelector = slideoutmenu.querySelectorAll("ul");
-    removeClassSelector.forEach(element =>{
-        element.classList.remove("nestedMenu");
-        app.toggleClasses(element, "invisible", "visible");
-    })
-    const removeClassSelector2 = slideoutmenu.querySelectorAll("ul > li");
-    removeClassSelector2.forEach(element =>{
-        element.classList.remove("nestedMenu");
-    })
+    const classRemover = function(targetElement, invisibilityCheck){
+        const removeClassSelector = slideoutmenu.querySelectorAll(targetElement);
+        removeClassSelector.forEach(element =>{
+            element.classList.remove("nestedMenu");
+            if (invisibilityCheck === true){
+                app.toggleClasses(element, "invisible", "visible");
+            }
+        })
+    }
+    classRemover('ul', true);
+    classRemover("ul > li", false);
 }
 
 app.projectListDropdownHandler = function(){
-    const slideoutMenu = document.querySelector("#slideoutMenu");
-
     //RECURSIVE SOLUTION
-    const findChildMenus = function(parent){
-        const allOtherMenus = parent.querySelectorAll('ul');
-
-
-
-
-        const collapseAllMenus = function(){
-            for (let i=0; i < allOtherMenus.length; i++){
-                const otherMenu = allOtherMenus[i];
-                app.toggleClasses(otherMenu, "invisible", "visible");
-            }
-        }
-
-
-        
-        const checkChildCountOfType = function(subparent, ofType){
-            const menuCount = subparent.querySelectorAll(ofType);
-            if (menuCount.length >= 2){
-                return subparent.hasMenu = true;
-            } else {
-                return subparent.hasMenu = false;
-            }
-        }
-        checkChildCountOfType(parent, 'ul');
-
-        if (parent.hasMenu === true){
-            const menus = parent.querySelectorAll('ul');
-            for (const menu of menus){
-
-                
-                let menuparent = menu.parentElement;
-                
-
-                
-                menuparent.addEventListener('click', function(){
-                    collapseAllMenus();
-                    menuparent.classList.add("nestedMenu")
-
-                    //THIS LINE OF CODE WHAT THE HECK!!!!!!!! the . did it.
-                    const submenus = menuparent.querySelectorAll('.nestedMenu > ul');
-                    submenus.forEach(element => {
-                        app.toggleClasses(element, "visible", "invisible");
-                    });
-                    app.toggleClasses(menu, "visible", "invisible");
-                })
-            }
-            for (let child of parent.children){
-                console.log(child);
-                findChildMenus(child);
-            }
+    const slideoutMenu = document.querySelector("#slideoutMenu");
+    const dropdownArrow = document.createElement("span");
+    dropdownArrow.innerText = "⏷";
+    // console.log(dropdownArrow);
+    
+    const checkIfHasMenu = function(target){
+        const menuCheck = target.querySelectorAll('ul');
+        if (menuCheck.length >= 1){
+            return target.hasMenu = true;
         } else {
-            parent.addEventListener('click', function(){
-                //bedrock level stuff to happen
-            })
+            return target.hasMenu = false;
         }
     }
+
+    const findChildMenus = function(parent){
+        parent.classList.add('topLevel');
+        
+        let options = parent.querySelectorAll('li');
+        options.forEach(option =>{
+            checkIfHasMenu(option);
+            
+            if (option.hasMenu === true){
+                const existingText = option.innerText;
+                option.innerText = (existingText + "⏷");
+                option.addEventListener('click', function(){
+                    this.classList.add('nestedMenu');
+                    let siblingMenus = parent.querySelectorAll('ul');
+                    siblingMenus.forEach(sibling =>{
+                        app.toggleClasses(sibling, "invisible", "visible");
+                    })
+                    const subMenu = option.querySelectorAll('.nestedMenu > ul');
+                    subMenu.forEach(element =>{
+                        app.toggleClasses(element, "visible", "invisible");
+                        findChildMenus(element);
+                    });
+                })
+            } else {
+                option.addEventListener('click', function(){
+                    console.log("this has no menu");
+                    app.slideOutHandler(false);
+                })
+            }
+        })
+    }
     findChildMenus(slideoutMenu);
-    
-
-
-
 }
 
 
-app.slideOutHandler = function(){
-    let slideOutToggle = false;
+app.slideOutHandler = function(slideoutState){
+    let slideOutToggle = slideoutState;
     
     const slideoutButton = document.querySelector("#sideNavButton");
     const slideoutPage = document.querySelector("#sideNavSlideout");
 
     slideoutButton.addEventListener('click', function(){
-        // console.log("you clicked it", slideOutToggle);
+        console.log("you clicked it", slideOutToggle);
         slideOutToggle = !slideOutToggle
-        if (slideOutToggle === true){
-            app.toggleClasses(slideoutPage, "showSlideout", "hideSlideout");
-            app.toggleClasses(slideoutButton, "fullCircle", "emptyCircle");
-            //this will remove the dropdown visibility properly
-            app.removeClassFromSection();
-        } else if (slideOutToggle === false) {
-            app.toggleClasses(slideoutPage, "hideSlideout", "showSlideout");
-            app.toggleClasses(slideoutButton,"emptyCircle", "fullCircle");
-            projectDropdownToggle = false;
-        }
+        app.slideOutHandler(slideOutToggle);
     });
+    if (slideOutToggle === true){
+        app.toggleClasses(slideoutPage, "showSlideout", "hideSlideout");
+        app.toggleClasses(slideoutButton, "fullCircle", "emptyCircle");
+        //this will remove the dropdown visibility properly
+        app.removeClassFromSection();
+    } else if (slideOutToggle === false) {
+        app.toggleClasses(slideoutPage, "hideSlideout", "showSlideout");
+        app.toggleClasses(slideoutButton,"emptyCircle", "fullCircle");
+        // projectDropdownToggle = false;
+    }
 }
 
 
@@ -123,7 +108,7 @@ app.slideOutHandler = function(){
 
 app.init = function(){
     // app.removeClassSelector();
-    app.slideOutHandler();
+    app.slideOutHandler(false);
     app.projectListDropdownHandler();
 }
 
