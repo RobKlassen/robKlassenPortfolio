@@ -13,16 +13,15 @@ app.toggleClasses = function(target, classToAdd, classToRemove){
 
 app.removeClassFromSection = function(){
     const slideoutmenu = document.querySelector('.slideoutMenu');
-    const removeClassSelector = slideoutmenu.querySelectorAll(".nestedMenu > ul");
-    // const removeClassSelectorLower = slideoutmenu.querySelectorAll("ul > li");
+    const removeClassSelector = slideoutmenu.querySelectorAll("ul");
     removeClassSelector.forEach(element =>{
         element.classList.remove("nestedMenu");
         app.toggleClasses(element, "invisible", "visible");
     })
-    // removeClassSelectorLower.forEach(element=>{
-    //     element.classList.remove("nestedMenu");
-    //     app.toggleClasses(element, "invisible", "visible");
-    // })
+    const removeClassSelector2 = slideoutmenu.querySelectorAll("ul > li");
+    removeClassSelector2.forEach(element =>{
+        element.classList.remove("nestedMenu");
+    })
 }
 
 app.projectListDropdownHandler = function(){
@@ -30,12 +29,12 @@ app.projectListDropdownHandler = function(){
 
     //RECURSIVE SOLUTION
     const findChildMenus = function(parent){
-   
+        const allOtherMenus = parent.querySelectorAll('ul');
+
 
 
 
         const collapseAllMenus = function(){
-            const allOtherMenus = parent.querySelectorAll('ul');
             for (let i=0; i < allOtherMenus.length; i++){
                 const otherMenu = allOtherMenus[i];
                 app.toggleClasses(otherMenu, "invisible", "visible");
@@ -43,11 +42,10 @@ app.projectListDropdownHandler = function(){
         }
 
 
-
         
         const checkChildCountOfType = function(subparent, ofType){
             const menuCount = subparent.querySelectorAll(ofType);
-            if (menuCount.length >= 1){
+            if (menuCount.length >= 2){
                 return subparent.hasMenu = true;
             } else {
                 return subparent.hasMenu = false;
@@ -58,15 +56,15 @@ app.projectListDropdownHandler = function(){
         if (parent.hasMenu === true){
             const menus = parent.querySelectorAll('ul');
             for (const menu of menus){
+
                 
                 let menuparent = menu.parentElement;
+                
 
+                
                 menuparent.addEventListener('click', function(){
-                    console.log(this);
-
-
                     collapseAllMenus();
-                    menuparent.classList.add("nestedMenu");
+                    menuparent.classList.add("nestedMenu")
 
                     //THIS LINE OF CODE WHAT THE HECK!!!!!!!! the . did it.
                     const submenus = menuparent.querySelectorAll('.nestedMenu > ul');
@@ -77,6 +75,7 @@ app.projectListDropdownHandler = function(){
                 })
             }
             for (let child of parent.children){
+                console.log(child);
                 findChildMenus(child);
             }
         } else {
@@ -86,6 +85,10 @@ app.projectListDropdownHandler = function(){
         }
     }
     findChildMenus(slideoutMenu);
+    
+
+
+
 }
 
 
