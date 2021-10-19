@@ -27,12 +27,8 @@ app.removeClassFromSection = function(){
 }
 
 app.projectListDropdownHandler = function(){
-    //RECURSIVE SOLUTION
     const slideoutMenu = document.querySelector("#slideoutMenu");
-    const dropdownArrow = document.createElement("span");
-    dropdownArrow.innerText = "⏷";
-    // console.log(dropdownArrow);
-    
+
     const checkIfHasMenu = function(target){
         const menuCheck = target.querySelectorAll('ul');
         if (menuCheck.length >= 1){
@@ -50,21 +46,35 @@ app.projectListDropdownHandler = function(){
             checkIfHasMenu(option);
             
             if (option.hasMenu === true){
-                const existingText = option.innerText;
-                option.innerText = (existingText + "⏷");
+
+                const innerAnchor = option.querySelector('a');
+                const newAnchorText = innerAnchor.innerText.replace(/⏷/g, "");
+                innerAnchor.innerText = (newAnchorText + " ⏷"); 
+                innerAnchor.classList.add("colorMe");
+
                 option.addEventListener('click', function(){
                     this.classList.add('nestedMenu');
                     let siblingMenus = parent.querySelectorAll('ul');
+                    
                     siblingMenus.forEach(sibling =>{
                         app.toggleClasses(sibling, "invisible", "visible");
+                        const removeAnchorColor = parent.querySelectorAll('.colorMe');
+                        removeAnchorColor.forEach(element =>{
+                            element.classList.remove('colorMe');
+                        })      
                     })
                     const subMenu = option.querySelectorAll('.nestedMenu > ul');
                     subMenu.forEach(element =>{
                         app.toggleClasses(element, "visible", "invisible");
-                        findChildMenus(element);
+                        findChildMenus(element);       
+
+                        const getAnchorElement = this.querySelector('a');
+                        getAnchorElement.classList.add('colorMe');
+     
                     });
                 })
             } else {
+                option.classList.remove('nestedMenu');
                 option.addEventListener('click', function(){
                     console.log("this has no menu");
                     app.slideOutHandler(false);
@@ -74,6 +84,7 @@ app.projectListDropdownHandler = function(){
     }
     findChildMenus(slideoutMenu);
 }
+
 
 
 app.slideOutHandler = function(slideoutState){

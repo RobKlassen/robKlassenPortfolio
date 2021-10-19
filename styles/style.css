@@ -453,3 +453,9 @@ a {
 .visible {
   display: block;
 }
+
+.sideNavSlideout ul .nestedMenu .colorMe {
+  color: #fbc25e;
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
+}
