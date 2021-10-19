@@ -2,29 +2,67 @@
     width:100px;
     height:100vh;
     position: fixed;
+    background-color: $colorDarkBlue;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
     
     .logoContainer{
         background-color: $colorMediumBlue;
         width:100px;
         height:100px;
-        display:flex;
-        justify-content: center;
-        align-items: center;
         img{
             width:100%;
 
             object-fit: contain;
         }
     }
-    .sideNavContainer{
-        height:100%;
-        background-color: $colorDarkBlue;
+    .sideNavButton{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            i{
+                transition: ease all 0.1s;
+                // color:$colorYellow;
+            }
+            .fas.fa-circle{
+                font-size:35px;
+            }
+            
+        }
+        &:hover{
+            .fas.fa-circle{
+                filter: drop-shadow(0 0 5px $colorYellow);
+                font-size: 40px;
+            }
+            .fa-bars{
+                font-size: 25px;
+                filter: drop-shadow(0 0 5px $colorDarkBlue);
+            }
+        }
     }
     .sideNavIcons{
+        width:100%;
+        margin-bottom: 25%;
         ul{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             li{
-                p{
-                    color:red;
+                margin:5%;
+                i{
+                    font-size: 30px;
+                    color:$colorTextSecondaryBlue;
+                    transition:ease all 0.2s; 
                 }
             }
         }

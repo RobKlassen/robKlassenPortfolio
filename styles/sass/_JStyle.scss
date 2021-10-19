@@ -1,0 +1,65 @@
+//SLIDEOUT STYLING
+
+.hideSlideout{
+    visibility:none;
+    left: -150%;
+}
+.showSlideout{
+    visibility: visible;
+    left: 0%;
+}
+
+.emptyCircle{
+    span{
+        .fas.fa-bars{
+            color:$colorYellow;
+        }
+        .far.fa-circle{
+            // color:$colorYellow;
+            color:$colorYellow;
+        }
+        .fas.fa-circle{
+            color:$colorDarkBlue;
+            // font-size: 50px;
+        }
+    }
+}
+.fullCircle{
+    span{
+        .fas.fa-bars{
+            color:$colorDarkBlue;
+        }
+        .far.fa-circle{
+            color:$colorYellow;
+        }
+        .fas.fa-circle{
+            color:$colorYellow;
+            // font-size: 50px;
+        }
+    }
+}
+
+// SLIDEOUT NAV PROJECT DROPDOWN STYLING
+
+.invisible{
+    // position:absolute;
+    // top:-500px;
+    display:none;
+}
+
+.visible{
+    display:block;
+    // position: relative;
+    // top:0;
+}
+
+// .nestedMenu::before{
+//     content: "▼";
+// }
+
+.sideNavSlideout ul .nestedMenu{
+    .colorMe{
+        color:$colorYellow;
+        filter: drop-shadow(0 0 5px $colorYellow);
+    }
+}
