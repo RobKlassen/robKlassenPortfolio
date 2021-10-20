@@ -251,6 +251,16 @@ html {
   background-color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   color: red;
 }
@@ -266,7 +276,58 @@ li {
 }
 
 a {
+  font-size: 0.8rem;
+  font-weight: 600px;
   text-decoration: none;
+  color: #bbc3dc;
+}
+
+button {
+  border-style: none;
+  background-color: #fbc25e;
+  color: #191d28;
+  font-variant: small-caps;
+}
+
+.wrapper {
+  margin-left: calc(10% + 100px);
+  margin-right: calc(10% + 100px);
+  max-width: 1500px;
+}
+
+.lightSection {
+  background-color: white;
+}
+
+.darkSection {
+  background-color: #292f40;
+}
+
+.iconPair {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
+  margin: 5%;
+}
+.iconPair p {
+  margin-top: 1vw;
+  font-size: 1.5vw;
+  color: #d3d5d9;
+}
+.iconPair p i {
+  font-size: 3.5vw;
+  color: #fbc25e;
 }
 
 .sidebarNavigation {
@@ -393,6 +454,7 @@ a {
   opacity: 0.98;
   -webkit-transition: ease all 0.8s;
   transition: ease all 0.8s;
+  z-index: 40;
 }
 .sideNavSlideout ul {
   margin-left: 8%;
@@ -416,6 +478,367 @@ a {
   width: 100%;
   margin-top: 5px;
 }
+header {
+  background-color: #292f40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .topNav {
+  position: sticky;
+  top: 0;
+  left: 100px;
+  width: calc(100% - 200px);
+  height: 100px;
+  background-color: #191d28;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header .topNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .topNav ul li {
+  padding: 0 4%;
+}
+header .topNav ul li a {
+  text-transform: uppercase;
+}
+header .topNav .mailMeBox {
+  width: 100px;
+  height: 100px;
+  border: solid 2px #191d28;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fbc25e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .topNav .mailMeBox p a {
+  color: #191d28;
+  font-size: 2rem;
+}
+header .mainTextContainer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: -100px;
+  padding: 7%;
+  width: 66%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #191d28;
+}
+header .mainTextContainer h3 {
+  font-variant: small-caps;
+  color: #fbc25e;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+header .mainTextContainer h1 {
+  font-variant: small-caps;
+  color: #d3d5d9;
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+header .mainTextContainer h2 {
+  color: #d3d5d9;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+header .mainTextContainer button {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.aboutSect .aboutContainer {
+  margin: 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutSect .aboutContainer .imageContainer {
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+.aboutSect .aboutContainer .imageContainer .backers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerLeft,
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerRight,
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerBottom {
+  position: absolute;
+  margin: 10%;
+  width: 80%;
+  height: 80%;
+  z-index: 0;
+  border-radius: 2px;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerLeft {
+  right: 15%;
+  background-color: #3d4761;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerBottom {
+  top: 20%;
+  background-color: #e8eefb;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerRight {
+  margin: 20%;
+  width: 76%;
+  height: 60%;
+  left: 10%;
+  background-color: #e8eefb;
+}
+.aboutSect .aboutContainer .imageContainer img {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+.aboutSect .aboutContainer .aboutMeContainer {
+  width: 60%;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2,
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText p {
+  color: #717896;
+  font-size: 1rem;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2,
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h3 {
+  padding-bottom: 10px;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2 {
+  font-variant: small-caps;
+  font-weight: 600;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.aboutSect .aboutContainer .aboutMeContainer button {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.skillSect {
+  height: 100%;
+  width: 100vw;
+}
+.skillSect .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.skillSect .skillContainer {
+  height: 100%;
+  width: 100%;
+  padding: 5% 10%;
+  margin: 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #191d28;
+}
+.skillSect .skillContainer .skillText {
+  width: 100%;
+  margin-bottom: 5%;
+}
+.skillSect .skillContainer .skillText h2,
+.skillSect .skillContainer .skillText p {
+  color: #d3d5d9;
+  margin-top: 5%;
+}
+.skillSect .skillContainer .skillText h2 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.skillSect .skillContainer .skillIconContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.skillSect .skillContainer .skillIconContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projectSect .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.projectSect .wrapper .projectShowcaseContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass img {
+  width: 40%;
+  height: 100%;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectInfo {
+  width: 60%;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectInfo a h3 {
+  color: #54668b;
+  font-size: 1.75rem;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectInfo a ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.projectSect .wrapper .projectShowcaseContainer .project1,
+.projectSect .wrapper .projectShowcaseContainer .project3 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.projectSect .wrapper .projectShowcaseContainer .project1 a h3,
+.projectSect .wrapper .projectShowcaseContainer .project1 a p,
+.projectSect .wrapper .projectShowcaseContainer .project1 a ul,
+.projectSect .wrapper .projectShowcaseContainer .project1 a li,
+.projectSect .wrapper .projectShowcaseContainer .project3 a h3,
+.projectSect .wrapper .projectShowcaseContainer .project3 a p,
+.projectSect .wrapper .projectShowcaseContainer .project3 a ul,
+.projectSect .wrapper .projectShowcaseContainer .project3 a li {
+  text-align: end;
+}
+.projectSect .wrapper .projectShowcaseContainer .project2,
+.projectSect .wrapper .projectShowcaseContainer .project4 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .hideSlideout {
   visibility: none;
   left: -150%;

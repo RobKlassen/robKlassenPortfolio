@@ -1,0 +1,81 @@
+.projectSect{
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        .projectsText{
+            // display: flex;
+            // flex-direction: column;
+            h2{
+                
+            }
+            p{
+    
+            }
+        }
+        .projectShowcaseContainer{
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .projectClass{
+                display:flex;
+                // flex-direction: row;
+                // align-items: center;
+                // justify-content: center;
+                width:80%;
+                img{
+                    width:40%;
+                    height:100%;
+                }
+                .projectInfo{
+                    width:60%;
+                    a{
+                        h3{
+                            color:$colorTextSecondaryBlue;
+                            font-size:1.75rem;
+    
+                        }
+                        p{
+    
+                        }
+                        ul{
+                            display:flex;
+                            flex-direction: row;
+                            .iconPair{
+
+                            }
+                        }
+                    }
+                }
+            }
+            .project1,
+            .project3{
+                flex-direction: row;
+                align-self: flex-end;
+                a{
+                    h3,
+                    p,
+                    ul,
+                    li{
+                        text-align: end;
+                    }
+                }
+            }
+            .project2,
+            .project4{
+                flex-direction: row-reverse;
+                align-self: flex-start;
+    
+            }
+            // .project3{
+            //     flex-direction: row;
+            //     align-self: flex-end;
+            // }
+            // .project4{
+            //     flex-direction: row-reverse;
+            //     align-self: flex-start;
+            // }
+        }
+    }
+}

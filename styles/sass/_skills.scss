@@ -1,0 +1,50 @@
+.skillSect{
+    height:100%;
+    width:100vw;
+    .wrapper{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skillContainer{
+        height:100%;
+        width:100%;
+        padding:5% 10%;
+        margin:10% 0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorDarkBlue;
+        .skillText{
+            width:100%;
+            margin-bottom: 5%;
+            h2,
+            p{
+                color:$colorTextWhite;
+                margin-top:5%;
+            }
+            h2{
+                // color: $colorTextWhite;
+                font-weight: 900;
+                font-size:2rem; 
+            }
+            p{
+    
+            }
+        }
+        .skillIconContainer{
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            ul{
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+            }
+        }
+    }
+
+}

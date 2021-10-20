@@ -1,3 +1,13 @@
+h1,
+h2,
+h3,
+h4,
+a,
+p{
+    margin:0;
+    padding:0;
+}
+
 h1{
     color:red;
 }
@@ -13,5 +23,55 @@ li{
 }
 
 a{
+    font-size: .8rem;
+    font-weight:600px;
+    // text-transform: uppercase;
     text-decoration: none;
+    color: $colorMainBrightLightBlue;
+}
+
+button{
+    border-style: none;
+    background-color: $colorYellow;
+    color:$colorDarkBlue;
+    font-variant: small-caps;
+}
+
+
+.wrapper{
+    margin-left: calc(10% + 100px);
+    margin-right: calc(10% + 100px);
+    max-width: 1500px;
+    
+}
+
+.lightSection{
+    background-color: $colorMainBrightTrueWhite;
+}
+
+.darkSection{
+    background-color: $colorMediumBlue;
+}
+
+
+
+
+.iconPair{
+    flex:1 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:10%;
+    margin:5%;
+    p{
+        margin-top:1vw;
+        font-size: 1.5vw;
+        color:$colorTextWhite;
+        i{
+            font-size:3.5vw;
+            color:$colorYellow;
+
+        }
+
+    }
 }

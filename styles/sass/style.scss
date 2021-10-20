@@ -6,12 +6,13 @@
 //html{} included in setup
 
 @import 'generalStyles';
+
 @import 'sideNav.scss';
 @import 'slideOut.scss';
+@import 'header.scss';
 
-
-
-
-
+@import 'about.scss';
+@import 'skills.scss';
+@import 'projects.scss';
 
 @import 'JStyle';

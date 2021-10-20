@@ -1,0 +1,88 @@
+.aboutSect{
+    .aboutContainer{
+        margin: 10% 0;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        // position: relative;
+        .imageContainer{
+            position: relative;
+            height:100%;
+            width:30%;
+            .backers{
+                position: absolute;
+                width:100%;
+                height:100%;
+                justify-self: center;
+                align-self: center;
+                .imgbackerLeft,
+                .imgbackerRight,
+                .imgbackerBottom{
+                    position:absolute;
+                    margin:10%;
+                    width:80%;
+                    height:80%;   
+                    z-index: 0;
+                    border-radius: 2px;
+                }
+                .imgbackerLeft{
+                    right:15%;
+                    background-color: $colorMainBrightDarkBlue;
+                }
+                .imgbackerBottom{
+                    top:20%;
+                    background-color: $colorMainBrightVeryLightBlue;
+                }
+                .imgbackerRight{
+                    margin:20%;
+                    width:76%;
+                    height:60%;
+                    left:10%;
+                    background-color: $colorMainBrightVeryLightBlue;
+                }
+            }
+
+            img{
+                position: relative;
+                z-index: 10;
+                width:100%;
+                height:100%;
+                border-radius: 3px;
+                // opacity: 50%;
+        
+            }
+        }
+        .aboutMeContainer{
+            width:60%;
+            .aboutMeText{
+                h2,
+                p{
+                    color:$colorTextSecondaryGrey;
+                    font-size: 1rem;
+                }
+                h2,
+                h3{
+                    padding-bottom: 10px;
+                }
+                h2{
+                    font-variant: small-caps;
+                    font-weight: 600;
+                }
+                h3{
+                    font-weight: 900;
+                    font-size:1.5rem;
+    
+                }
+                p{
+                    
+                }
+            }
+            button{
+                width:200px;
+                height:50px;
+                margin-top: 50px;
+            }
+        }
+    }
+}
