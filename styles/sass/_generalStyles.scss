@@ -52,26 +52,3 @@ button{
 .darkSection{
     background-color: $colorMediumBlue;
 }
-
-
-
-
-.iconPair{
-    flex:1 0 auto;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width:10%;
-    margin:5%;
-    p{
-        margin-top:1vw;
-        font-size: 1.5vw;
-        color:$colorTextWhite;
-        i{
-            font-size:3.5vw;
-            color:$colorYellow;
-
-        }
-
-    }
-}

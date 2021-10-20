@@ -1,0 +1,17 @@
+footer{
+    background: $colorSidebarBlack;
+    z-index:100;
+    padding:20px 0;
+    .wrapper{
+        .footerContainer{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            p{
+                font-size:0.8rem;
+                color:$colorMainBrightDarkBlue;
+            }
+        }
+    }
+}
