@@ -251,6 +251,16 @@ html {
   background-color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   color: red;
 }
@@ -266,7 +276,31 @@ li {
 }
 
 a {
+  font-size: 0.8rem;
+  font-weight: 600px;
   text-decoration: none;
+  color: #bbc3dc;
+}
+
+button {
+  border-style: none;
+  background-color: #fbc25e;
+  color: #191d28;
+  font-variant: small-caps;
+}
+
+.wrapper {
+  margin-left: calc(10% + 100px);
+  margin-right: calc(10% + 100px);
+  max-width: 1500px;
+}
+
+.lightSection {
+  background-color: white;
+}
+
+.darkSection {
+  background-color: #292f40;
 }
 
 .sidebarNavigation {
@@ -393,6 +427,7 @@ a {
   opacity: 0.98;
   -webkit-transition: ease all 0.8s;
   transition: ease all 0.8s;
+  z-index: 40;
 }
 .sideNavSlideout ul {
   margin-left: 8%;
@@ -416,6 +451,657 @@ a {
   width: 100%;
   margin-top: 5px;
 }
+header {
+  background-color: #292f40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .topNav {
+  position: sticky;
+  top: 0;
+  left: 100px;
+  width: calc(100% - 200px);
+  height: 100px;
+  background-color: #191d28;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header .topNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .topNav ul li {
+  padding: 0 4%;
+}
+header .topNav ul li a {
+  text-transform: uppercase;
+}
+header .topNav .mailMeBox {
+  width: 100px;
+  height: 100px;
+  border: solid 2px #191d28;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fbc25e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .topNav .mailMeBox p a {
+  color: #191d28;
+  font-size: 2rem;
+}
+header .mainTextContainer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: -100px;
+  padding: 7%;
+  width: 66%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #191d28;
+}
+header .mainTextContainer h3 {
+  font-variant: small-caps;
+  color: #fbc25e;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+header .mainTextContainer h1 {
+  font-variant: small-caps;
+  color: #d3d5d9;
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+header .mainTextContainer h2 {
+  color: #d3d5d9;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+header .mainTextContainer button {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.aboutSect .aboutContainer {
+  margin: 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutSect .aboutContainer .imageContainer {
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+.aboutSect .aboutContainer .imageContainer .backers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerLeft,
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerRight,
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerBottom {
+  position: absolute;
+  margin: 10%;
+  width: 80%;
+  height: 80%;
+  z-index: 0;
+  border-radius: 2px;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerLeft {
+  right: 15%;
+  background-color: #3d4761;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerBottom {
+  top: 20%;
+  background-color: #e8eefb;
+}
+.aboutSect .aboutContainer .imageContainer .backers .imgbackerRight {
+  margin: 20%;
+  width: 76%;
+  height: 60%;
+  left: 10%;
+  background-color: #e8eefb;
+}
+.aboutSect .aboutContainer .imageContainer img {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+.aboutSect .aboutContainer .aboutMeContainer {
+  width: 60%;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2,
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText p {
+  color: #717896;
+  font-size: 1rem;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2,
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h3 {
+  padding-bottom: 10px;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2 {
+  font-variant: small-caps;
+  font-weight: 600;
+}
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.aboutSect .aboutContainer .aboutMeContainer button {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.skillSect {
+  height: 100%;
+}
+.skillSect .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.skillSect .skillContainer {
+  height: 100%;
+  width: 100%;
+  padding: 5% 10%;
+  margin: 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #191d28;
+}
+.skillSect .skillContainer .skillText {
+  width: 100%;
+  margin-bottom: 5%;
+}
+.skillSect .skillContainer .skillText h2,
+.skillSect .skillContainer .skillText p {
+  color: #d3d5d9;
+  margin-top: 5%;
+}
+.skillSect .skillContainer .skillText h2 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.skillSect .skillContainer .skillIconContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.skillSect .skillContainer .skillIconContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.skillSect .skillContainer .skillIconContainer ul .iconPair {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
+  margin: 5%;
+}
+.skillSect .skillContainer .skillIconContainer ul .iconPair p {
+  margin-top: 1vw;
+  font-size: 1.5vw;
+  color: #d3d5d9;
+}
+.skillSect .skillContainer .skillIconContainer ul .iconPair p i {
+  font-size: 3.5vw;
+  color: #fbc25e;
+}
+
+.projectSect .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+.projectSect .wrapper .projectShowcaseContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 1rem 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer {
+  width: 90%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e8eefb;
+  position: relative;
+  -webkit-transition: ease all 0.25s;
+  transition: ease all 0.25s;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox {
+  position: absolute;
+  right: 0rem;
+  width: 5rem;
+  margin: 1rem;
+  -webkit-transition: ease all 0.25s;
+  transition: ease all 0.25s;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox a {
+  background-color: white;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox a i {
+  font-size: 3rem;
+  color: #333132;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox {
+  max-height: 100%;
+  min-height: 210px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  min-height: 210px;
+  top: 0;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .projectInfo {
+  max-width: 400px;
+  margin: 25px 10px;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .projectInfo h3 {
+  color: #54668b;
+  font-size: 1.75rem;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .projectInfo p {
+  color: #3d4862;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover {
+  width: 100%;
+  background-color: #bbc3dc;
+  -webkit-box-shadow: -10px 0 #3d4761;
+          box-shadow: -10px 0 #3d4761;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover .gitBox {
+  right: -5rem;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover a .imgBox img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul i {
+  font-size: 2.5rem;
+  color: #333132;
+  margin: 10px;
+}
+
+.contactSect {
+  height: 100%;
+}
+.contactSect .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contactSect .wrapper .contactContainer {
+  height: 100%;
+  width: 100%;
+  padding: 5% 10%;
+  margin: 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #191d28;
+}
+.contactSect .wrapper .contactContainer .contactText {
+  width: 100%;
+}
+.contactSect .wrapper .contactContainer .contactText h2 {
+  color: #d3d5d9;
+}
+.contactSect .wrapper .contactContainer .contactText p {
+  color: #717896;
+}
+.contactSect .wrapper .contactContainer .lowerHalf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form {
+  width: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .topInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox label {
+  width: 175px;
+  color: #fbc25e;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox input {
+  width: 100%;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: solid 2px #54668b;
+  background: #191d28;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox input:focus {
+  padding: 3px;
+  outline: none;
+  border: solid 2px #54668b;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .bottomInput {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .bottomInput label {
+  color: #fbc25e;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .bottomInput textarea {
+  width: 100%;
+  height: 200px;
+  color: white;
+  padding: 5px;
+  margin-top: 5px;
+  border: none;
+  border-left: solid 2px #54668b;
+  background: #191d28;
+  width: 100%;
+  resize: none;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form .bottomInput textarea:focus {
+  padding: 3px;
+  outline: none;
+  border: solid 2px #54668b;
+}
+.contactSect .wrapper .contactContainer .lowerHalf form button {
+  margin-top: 10px;
+  height: 50px;
+  width: 200px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul {
+  background: #292f40;
+  height: 100%;
+  padding: 0px 15px;
+  margin: auto 0 auto 20px;
+  width: 57px;
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul li i {
+  font-size: 1.5rem;
+  color: #54668b;
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul li p {
+  white-space: nowrap;
+  font-size: 0.8rem;
+  margin-left: 12px;
+  color: #fbc25e;
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul li p span {
+  font-weight: 900;
+  color: #d3d5d9;
+  width: 20px;
+}
+
+footer {
+  background: #090a0e;
+  z-index: 100;
+  padding: 20px 0;
+}
+footer .wrapper .footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .wrapper .footerContainer p {
+  font-size: 0.8rem;
+  color: #3d4761;
+}
+
 .hideSlideout {
   visibility: none;
   left: -150%;

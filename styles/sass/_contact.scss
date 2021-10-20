@@ -1,0 +1,137 @@
+.contactSect{
+    height:100%;
+    .wrapper{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .contactContainer{
+            height:100%;
+            width:100%;
+            padding:5% 10%;
+            margin:10% 0;
+            display:flex;
+            flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            background-color: $colorDarkBlue;
+            .contactText{
+                width:100%;
+                h2{
+                    color: $colorTextWhite;
+                }
+                p{
+                    color: $colorTextSecondaryGrey;
+                }
+            }
+            .lowerHalf{
+                display: flex;
+                flex-direction: row;
+                form{
+                    width:66%;
+                    display:flex;
+                    flex-direction: column;
+    
+                    .topInputs{
+                        display:flex;
+                        flex-direction: column;
+                        .inputBox{
+                            width:100%;
+                            display:flex;
+                            flex-direction: row;
+                            align-items: center;
+                            label{
+                                width:175px;
+                                color:$colorYellow;
+                            }
+                            input{
+                                width:100%;
+                                color:white;
+                                margin: 10px;
+                                padding:5px;
+                                width:100%;
+                                height:40px;
+                                border:none;
+                                border-bottom:solid 2px $colorTextSecondaryBlue;
+                                background: $colorDarkBlue;
+    
+                                &:focus{
+                                    padding:3px;
+                                    outline: none;
+                                    border:solid 2px $colorTextSecondaryBlue;
+                                }
+                            }
+                        }
+                    }
+                    .bottomInput{
+                        width:100%;
+                        display:flex;
+                        flex-direction: column;
+                        margin-top:10px;
+                        label{
+                            // width:175px;
+                            color:$colorYellow;
+                        }
+                        
+                        textarea{
+                            width:100%;
+                            height:200px;
+                            color:white;
+                            padding:5px;
+
+                            margin-top:5px;
+
+                            border:none;
+                            border-left:solid 2px $colorTextSecondaryBlue;
+                            background: $colorDarkBlue;
+
+                            width:100%;
+                            resize: none;
+                            &:focus{
+                                padding:3px;
+                                outline: none;
+                                border:solid 2px $colorTextSecondaryBlue;
+                            }
+                        }
+                    }
+                    button{
+                        margin-top: 10px;
+                        height:50px;
+                        width:200px;
+                        align-self: flex-end;
+                    }
+                }
+                ul{
+                    background:$colorMediumBlue;
+                    height:100%;
+                    padding:0px 15px;
+                    margin: auto 0 auto 20px;
+                    width:57px;
+                    li{
+                        display: flex;
+                        flex-direction: row;
+                        align-content: center;
+                        align-items: center;
+                        margin:20px 0;
+                        // justify-content: center;
+                        i{
+                            font-size:1.5rem;
+                            color:$colorTextSecondaryBlue;
+                        }
+                        p{
+                            span{
+                                font-weight: 900;
+                                color:$colorTextWhite;
+                                width:20px;
+                            }
+                            white-space: nowrap;
+                            font-size:0.8rem;
+                            margin-left: 12px;
+                            color:$colorYellow;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
