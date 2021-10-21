@@ -285,8 +285,22 @@ a {
 button {
   border-style: none;
   background-color: #fbc25e;
-  color: #191d28;
+  color: #292f40;
   font-variant: small-caps;
+  font-size: 1rem;
+  font-weight: 600;
+}
+button:hover, button:focus {
+  border: solid 2px #191d28;
+  -webkit-filter: drop-shadow(0 0 2px #fbc25e);
+          filter: drop-shadow(0 0 2px #fbc25e);
+}
+button:hover:active, button:focus:active {
+  border: solid 2px #fbc25e;
+  background: #292f40;
+  color: #fbc25e;
+  -webkit-box-shadow: inset 0 0 4px #fbc25e;
+          box-shadow: inset 0 0 4px #fbc25e;
 }
 
 .wrapper {
@@ -332,6 +346,12 @@ button {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.sidebarNavigation .logoContainer img:hover {
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
 }
 .sidebarNavigation .sideNavButton {
   display: -webkit-box;
@@ -402,11 +422,16 @@ button {
 .sidebarNavigation .sideNavIcons ul li {
   margin: 5%;
 }
-.sidebarNavigation .sideNavIcons ul li i {
+.sidebarNavigation .sideNavIcons ul li a i {
   font-size: 30px;
   color: #54668b;
   -webkit-transition: ease all 0.2s;
   transition: ease all 0.2s;
+}
+.sidebarNavigation .sideNavIcons ul li a i:hover {
+  color: #fbc25e;
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
 }
 
 .sideNavSlideout {
@@ -424,7 +449,7 @@ button {
   width: 150%;
   height: 100%;
   margin-left: 100px;
-  opacity: 0.98;
+  opacity: 0.95;
   -webkit-transition: ease all 0.8s;
   transition: ease all 0.8s;
   z-index: 40;
@@ -453,6 +478,10 @@ button {
 }
 header {
   background-color: #292f40;
+  background-image: url(./assets/potentialheader2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,6 +535,21 @@ header .topNav ul li {
 }
 header .topNav ul li a {
   text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  border-top: 2px solid #191d28;
+  border-bottom: 2px solid #191d28;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header .topNav ul li a:hover, header .topNav ul li a:focus {
+  padding: 0;
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
+  border-top: 2px solid #fbc25e;
+  border-bottom: 2px solid #fbc25e;
+  color: #fbc25e;
 }
 header .topNav .mailMeBox {
   width: 100px;
@@ -525,13 +569,25 @@ header .topNav .mailMeBox {
       -ms-flex-align: center;
           align-items: center;
 }
-header .topNav .mailMeBox p a {
+header .topNav .mailMeBox:hover, header .topNav .mailMeBox:focus {
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  background-color: #090a0e;
+  -webkit-box-shadow: inset 0px 0px 35px 0px #fbc25e;
+          box-shadow: inset 0px 0px 35px 0px #fbc25e;
+}
+header .topNav .mailMeBox:hover p, header .topNav .mailMeBox:focus p {
+  color: #fbc25e;
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
+}
+header .topNav .mailMeBox p {
   color: #191d28;
   font-size: 2rem;
 }
 header .mainTextContainer {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 125px;
+  margin-bottom: 200px;
   margin-right: -100px;
   padding: 7%;
   width: 66%;
@@ -654,7 +710,12 @@ header .mainTextContainer button {
   font-weight: 900;
   font-size: 1.5rem;
 }
-.aboutSect .aboutContainer .aboutMeContainer button {
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText p,
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h3 {
+  text-align: justify;
+  text-justify: auto;
+}
+.aboutSect .aboutContainer .aboutMeContainer a button {
   width: 200px;
   height: 50px;
   margin-top: 50px;
@@ -702,8 +763,11 @@ header .mainTextContainer button {
 .skillSect .skillContainer .skillText p {
   color: #d3d5d9;
   margin-top: 5%;
+  text-align: justify;
+  text-justify: auto;
 }
 .skillSect .skillContainer .skillText h2 {
+  font-variant: small-caps;
   font-weight: 900;
   font-size: 2rem;
 }
@@ -767,6 +831,12 @@ header .mainTextContainer button {
           flex-direction: column;
   margin-top: 50px;
 }
+.projectSect .wrapper .projectsText h2 {
+  font-variant: small-caps;
+}
+.projectSect .wrapper .projectsText p {
+  margin: 15px 0;
+}
 .projectSect .wrapper .projectShowcaseContainer {
   width: 100%;
   display: -webkit-box;
@@ -824,13 +894,33 @@ header .mainTextContainer button {
   margin: 1rem;
   -webkit-transition: ease all 0.25s;
   transition: ease all 0.25s;
+  width: 100px;
+  height: 100px;
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox a {
-  background-color: white;
+  background: #191d28;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox a i {
   font-size: 3rem;
-  color: #333132;
+  color: #bbc3dc;
+  -webkit-filter: drop-shadow(0 0 5px #54668b);
+          filter: drop-shadow(0 0 5px #54668b);
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a {
   display: -webkit-box;
@@ -878,7 +968,7 @@ header .mainTextContainer button {
           box-shadow: -10px 0 #3d4761;
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover .gitBox {
-  right: -5rem;
+  right: -7rem;
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover a .imgBox img {
   -webkit-filter: grayscale(0);
@@ -918,6 +1008,7 @@ header .mainTextContainer button {
           align-items: center;
 }
 .contactSect .wrapper .contactContainer {
+  position: relative;
   height: 100%;
   width: 100%;
   padding: 5% 10%;
@@ -932,7 +1023,7 @@ header .mainTextContainer button {
   background-color: #191d28;
 }
 .contactSect .wrapper .contactContainer .contactText {
-  width: 100%;
+  width: 66%;
 }
 .contactSect .wrapper .contactContainer .contactText h2 {
   color: #d3d5d9;
@@ -948,6 +1039,9 @@ header .mainTextContainer button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .contactSect .wrapper .contactContainer .lowerHalf form {
   width: 66%;
@@ -988,18 +1082,17 @@ header .mainTextContainer button {
 .contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox input {
   width: 100%;
   color: white;
-  margin: 10px;
+  margin: 10px 0 10px 10px;
   padding: 5px;
   width: 100%;
   height: 40px;
   border: none;
-  border-bottom: solid 2px #54668b;
-  background: #191d28;
+  background: #333132;
 }
 .contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox input:focus {
   padding: 3px;
   outline: none;
-  border: solid 2px #54668b;
+  border: solid 2px #090a0e;
 }
 .contactSect .wrapper .contactContainer .lowerHalf form .bottomInput {
   width: 100%;
@@ -1022,29 +1115,40 @@ header .mainTextContainer button {
   padding: 5px;
   margin-top: 5px;
   border: none;
-  border-left: solid 2px #54668b;
-  background: #191d28;
+  background: #333132;
   width: 100%;
   resize: none;
 }
 .contactSect .wrapper .contactContainer .lowerHalf form .bottomInput textarea:focus {
   padding: 3px;
   outline: none;
-  border: solid 2px #54668b;
+  border: solid 2px #090a0e;
 }
 .contactSect .wrapper .contactContainer .lowerHalf form button {
   margin-top: 10px;
   height: 50px;
   width: 200px;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .contactSect .wrapper .contactContainer .lowerHalf ul {
   background: #292f40;
   height: 100%;
   padding: 0px 15px;
-  margin: auto 0 auto 20px;
+  margin: 0 -10% 0 0;
   width: 57px;
+  -ms-flex-item-align: end;
+      align-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .contactSect .wrapper .contactContainer .lowerHalf ul li {
   display: -webkit-box;
@@ -1068,13 +1172,19 @@ header .mainTextContainer button {
 .contactSect .wrapper .contactContainer .lowerHalf ul li p {
   white-space: nowrap;
   font-size: 0.8rem;
-  margin-left: 12px;
+  margin-right: 12px;
   color: #fbc25e;
 }
 .contactSect .wrapper .contactContainer .lowerHalf ul li p span {
   font-weight: 900;
   color: #d3d5d9;
   width: 20px;
+}
+.contactSect .wrapper .contactContainer .rkcodeLogo {
+  position: absolute;
+  width: 30%;
+  right: 5%;
+  top: 5%;
 }
 
 footer {

@@ -15,8 +15,11 @@
         height:100px;
         img{
             width:100%;
-
             object-fit: contain;
+            &:hover{
+                transition: ease all 0.2s;
+                filter: drop-shadow(0 0 5px $colorYellow);
+            }
         }
     }
     .sideNavButton{
@@ -59,10 +62,14 @@
             align-items: center;
             li{
                 margin:5%;
-                i{
+                a i{
                     font-size: 30px;
                     color:$colorTextSecondaryBlue;
                     transition:ease all 0.2s; 
+                    &:hover{
+                        color:$colorYellow;
+                        filter: drop-shadow(0 0 5px $colorYellow);
+                    }
                 }
             }
         }

@@ -33,8 +33,22 @@ a{
 button{
     border-style: none;
     background-color: $colorYellow;
-    color:$colorDarkBlue;
+    color:$colorMediumBlue;
     font-variant: small-caps;
+    font-size: 1rem;
+    font-weight: 600;
+    &:hover,
+    &:focus{
+        border: solid 2px $colorDarkBlue;
+        filter: drop-shadow(0 0 2px $colorYellow);
+    &:active{
+        border: solid 2px $colorYellow;
+        background: $colorMediumBlue;
+        color:$colorYellow;
+        box-shadow: inset 0 0 4px $colorYellow;
+    }
+    }
+
 }
 
 

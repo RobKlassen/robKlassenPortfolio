@@ -5,17 +5,16 @@
         justify-content: center;
         align-items: center;
         .contactContainer{
+            position:relative;
             height:100%;
             width:100%;
             padding:5% 10%;
             margin:10% 0;
             display:flex;
             flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
             background-color: $colorDarkBlue;
             .contactText{
-                width:100%;
+                width:66%;
                 h2{
                     color: $colorTextWhite;
                 }
@@ -26,6 +25,7 @@
             .lowerHalf{
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
                 form{
                     width:66%;
                     display:flex;
@@ -46,18 +46,17 @@
                             input{
                                 width:100%;
                                 color:white;
-                                margin: 10px;
+                                margin: 10px 0 10px 10px;
                                 padding:5px;
                                 width:100%;
                                 height:40px;
                                 border:none;
-                                border-bottom:solid 2px $colorTextSecondaryBlue;
-                                background: $colorDarkBlue;
+                                background: $colorDarkYellow;
     
                                 &:focus{
                                     padding:3px;
                                     outline: none;
-                                    border:solid 2px $colorTextSecondaryBlue;
+                                    border:solid 2px $colorSidebarBlack;
                                 }
                             }
                         }
@@ -68,7 +67,6 @@
                         flex-direction: column;
                         margin-top:10px;
                         label{
-                            // width:175px;
                             color:$colorYellow;
                         }
                         
@@ -81,15 +79,14 @@
                             margin-top:5px;
 
                             border:none;
-                            border-left:solid 2px $colorTextSecondaryBlue;
-                            background: $colorDarkBlue;
+                            background: $colorDarkYellow;
 
                             width:100%;
                             resize: none;
                             &:focus{
                                 padding:3px;
                                 outline: none;
-                                border:solid 2px $colorTextSecondaryBlue;
+                                border:solid 2px $colorSidebarBlack;
                             }
                         }
                     }
@@ -97,22 +94,25 @@
                         margin-top: 10px;
                         height:50px;
                         width:200px;
-                        align-self: flex-end;
+                        align-self: flex-start;
                     }
                 }
                 ul{
                     background:$colorMediumBlue;
                     height:100%;
                     padding:0px 15px;
-                    margin: auto 0 auto 20px;
+                    margin: 0 -10% 0 0;
                     width:57px;
+                    align-self: end;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: flex-end;
                     li{
                         display: flex;
                         flex-direction: row;
                         align-content: center;
                         align-items: center;
                         margin:20px 0;
-                        // justify-content: center;
                         i{
                             font-size:1.5rem;
                             color:$colorTextSecondaryBlue;
@@ -125,12 +125,19 @@
                             }
                             white-space: nowrap;
                             font-size:0.8rem;
-                            margin-left: 12px;
+                            margin-right: 12px;
                             color:$colorYellow;
                         }
                         
                     }
                 }
+            }
+            .rkcodeLogo{
+                position:absolute;
+                width:30%;
+                right:5%;
+                top:5%;
+                // height:100px;
             }
         }
     }

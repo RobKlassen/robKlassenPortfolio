@@ -5,10 +5,10 @@
         margin-top:50px;
         .projectsText{
             h2{
-                
+                font-variant: small-caps;     
             }
             p{
-    
+                margin:15px 0;
             }
         }
         .projectShowcaseContainer{
@@ -40,11 +40,21 @@
                         width:5rem;
                         margin:1rem;
                         transition: ease all 0.25s;
+                        width:100px;
+                        height:100px;
+                        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
                         a {
-                            background-color: $colorMainBrightTrueWhite;
+                            background:$colorDarkBlue;
+                            height:100px;
+                            display:flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            // background-color: $colorMainBrightTrueWhite;
                             i{
                                 font-size: 3rem;
-                                color:$colorDarkYellow;
+                                color:$colorMainBrightLightBlue;
+                                filter: drop-shadow(0 0 5px $colorTextSecondaryBlue);
                             }
                         }
                     }
@@ -90,7 +100,7 @@
                         background-color: $colorMainBrightLightBlue;
                         box-shadow: -10px 0 $colorMainBrightDarkBlue;
                         .gitBox {
-                            right:-5rem;
+                            right:-7rem;
                         }
                         a{
                             .imgBox{

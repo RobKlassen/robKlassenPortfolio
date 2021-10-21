@@ -1,5 +1,11 @@
 header{
     background-color: $colorMediumBlue;
+    background-image: url(./assets/potentialheader2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +30,21 @@ header{
             li{
                 padding: 0 4%;
                 a{
-                    text-transform: uppercase;  
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    transition: ease all 0.2s;
+                    border-top:2px solid $colorDarkBlue;
+                    border-bottom:2px solid $colorDarkBlue;
+                    padding-top:10px;
+                    padding-bottom:10px;
+                    &:hover,
+                    &:focus{
+                        padding:0;
+                        filter: drop-shadow(0 0 5px $colorYellow);
+                        border-top:2px solid $colorYellow;
+                        border-bottom:2px solid $colorYellow;
+                        color:$colorYellow;
+                    }  
                 }
             }
         }
@@ -39,15 +59,25 @@ header{
             display:flex;
             justify-content: center;
             align-items: center;
-            p a{
+            &:hover,
+            &:focus{
+                transition: ease all 0.2s;
+                background-color: $colorSidebarBlack;
+                box-shadow: inset 0px 0px 35px 0px $colorYellow;
+                p{
+                    color:$colorYellow;
+                    filter: drop-shadow(0 0 5px $colorYellow);
+                }
+            }
+            p{
                 color:$colorDarkBlue;
                 font-size:2rem;
             }
         }
     }
     .mainTextContainer{
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin-top: 125px;
+        margin-bottom: 200px;
         margin-right: -100px;
         padding: 7%;
         width:66%;
