@@ -111,8 +111,32 @@ app.slideOutHandler = function(slideoutState){
 }
 
 
+app.snapToSpotHandler = function(){
+    const seeWorkButton = document.getElementById('seeWorkButton');
+    const projectSection = document.getElementById('projectSection');
 
+    seeWorkButton.addEventListener('click', function(){
+        projectSection.scrollIntoView({behavior:'smooth', block: "start"});
+    }) 
+}
 
+app.imageClick = function(cycle){
+    const myimage = document.getElementById('myPhoto');
+    urlCycle = [
+        "./styles/assets/headshot.png",
+        "./styles/assets/doghandshake.png",
+        "./styles/assets/rkcodelogo13.png"
+    ];
+
+    myimage.addEventListener('click', function(){
+        myimage.src = urlCycle[cycle];
+        if (cycle === 2){
+            cycle = 0;
+        } else { 
+            cycle++;
+        }
+    });
+}
 
 
 
@@ -121,6 +145,8 @@ app.init = function(){
     // app.removeClassSelector();
     app.slideOutHandler(false);
     app.projectListDropdownHandler();
+    app.snapToSpotHandler();
+    app.imageClick(1);
 }
 
 app.init();

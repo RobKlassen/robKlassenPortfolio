@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/fd2248e09b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="shortcut icon" href="styles/assets/rkcoding.png">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <title>Rob Klassen</title>
 </head>
 <body>
     <nav class="sidebarNavigation">
@@ -19,90 +20,85 @@
                 <i class="far fa-circle fa-stack-2x"></i>
                 <i class="fas fa-circle fa-stack-1x"></i>
                 <i class="fas fa-bars fa-stack-1x"></i>
-                <!-- <i class="fas fa-home fa-stack-1x"></i> -->
             </span>
         </div>
         <div class="sideNavIcons">
             <ul>
                 <li>
-                    <i class="fab fa-github-square"></i>
+                    <a href="https://github.com/RobKlassen"><i class="fab fa-github-square"></i></a>
                 </li>
                 <li>
-                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/rob-klassen/"><i class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
-                    <i class="fab fa-medium"></i>
+                    <a href="https://robkcoding.medium.com/"><i class="fab fa-medium"></i></a>
                 </li>
                 <li>
-                    <i class="far fa-envelope"></i>
+                    <a href="#contactSection"><i class="far fa-envelope"></i></a>
                 </li>
             </ul>
         </div>
     </nav>
     <section class="sideNavSlideout hideSlideout" id="sideNavSlideout">
         <ul class="slideoutMenu" id="slideoutMenu">
-            <li><a href="#">Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Skills</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutSection">About</a></li>
+            <li><a href="#skillSection">Skills</a></li>
             <li id="projectDropdown"><a>Projects</a>
                 <ul class="slideoutProjectList invisible" id="slideoutProjectList">
-                    <li><a>Project 1</a></li>
-                    <li><a>Project 2</a></li>
-                    <li><a>Project 3</a></li>
-                    <li><a>Project 4</a></li>
+                    <li><a href="#project1">Project 1</a></li>
+                    <!-- ======================================= -->
+                    <!-- ==========ADD TITLES=============== -->
+                    <!-- ======================================= -->
+                    <li><a href="#project2">Project 2</a></li>
+                    <li><a href="#project3">Project 3</a></li>
+                    <li><a href="#project4">Project 4</a></li>
                 </ul>
             </li>
-            <li><a>Contact</a></li>
+            <li><a href="#contactSection">Contact</a></li>
             <li><a>Recursive Menu Test</a>
                 <ul class="invisible">
-                    <li><a>menu item 1</a>
+                    <li><a>Living Fossils</a>
                         <ul class="invisible">
-                            <li><a>submenu item 1</a></li>
-                            <li><a>submenu item 2</a></li>
-                            <li><a>submenu item 2</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Coelacanth">Coelacanth</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Welwitschia">Welwitschia</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Tuatara">Tuatara</a></li>
                         </ul>                    
                     </li>
-                    <li><a>menu item 2</a></li>
-                    <li><a>menu item 3</a></li>
-                    <li><a>menu item 4</a></li>
+                    <li><a>Menu Item 2</a></li>
+                    <li><a>Menu Item 3</a></li>
+                    <li><a>Menu Item 4</a></li>
                 </ul>
             </li>
         </ul>
     </section>
 
-    <nav class="pageLocationNavigation">
-        <div class="positionMarker">
-            <!-- font awesome? Location?  Borders? -->
-        </div>
-        <div class="contactMe">
-            <!-- mailme logo -->
-        </div>
-    </nav>
-
-    <header>
+    <header id="home">
         <nav class="topNav">
             <ul>
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Skills</a></li>
-                <li><a>Projects</a></li>
-                <li><a>Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutSection">About</a></li>
+                <li><a href="#skillSection">Skills</a></li>
+                <li><a href="#projectSection">Projects</a></li>
+                <li><a href="#contactSection">Contact</a></li>
             </ul>
-            <div class="mailMeBox">
-                <p><a><i class="far fa-envelope"></i></a></p>
-            </div>
+            <a href="#contactSection">
+                <div class="mailMeBox">
+                    <p><i class="far fa-envelope"></i></p>
+                </div>
+            </a>
         </nav>
 
         <div class="mainTextContainer">
             <h3>- Learn - Adapt - Optimize - </h3>
             <h1>Rob Klassen</h1>
-            <h2>My mission statement Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatum ad debitis? Tempore officia recusandae amet doloremque voluptatibus accusamus </h2>
-            <button>See Work</button>
+            <h2>Front-End Web Developer</h2>
+            <button id="seeWorkButton">See Work</button>
         </div>
     </header>
 
     <main>
-        <section class="aboutSect lightSection">
+        <section class="aboutSect lightSection" id="aboutSection">
             <!-- ABOUT -->
             <div class="wrapper">
                 <div class="aboutContainer">
@@ -112,33 +108,33 @@
                             <div class="imgbackerRight"></div>
                             <div class="imgbackerBottom"></div>
                         </div>
-                        <img src="./styles/assets/headshot.png" alt="">
+                        <img src="./styles/assets/headshot.png" alt="A photo of me! Rob Klassen. I'm standing in a forest with hair blowing majestically in the wind." id="myPhoto">
                     </div>
                     <div class="aboutMeContainer">
                         <div class="aboutMeText">
                             <h2>About Me</h2>
-                            <h3>Snappy One-Liner about Rob Klassen! I love to Code!!</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi laudantium debitis aspernatur excepturi tenetur non dolore obcaecati, provident soluta accusamus quibusdam neque minima. Eaque alias quis debitis placeat laudantium.*1</p>
+                            <h3>Exploring a New Career One Line Of Code At A Time</h3>
+                            <p>
+                                Recently graduated from the Immersive Web Development Bootcamp at Juno College, I couldn't be happier with my decision to explore a new career path.  Coding has given me the opportunity to engage with an ever-changing, always evolving industry that will never get boring. 
+                            </p>
                         </div>
-                        <button>See Resume</button>
+                        <a href="./robsResumeV01.pdf"><button>See Resume</button></a>
                     </div>
                 </div>
             </div>
         </section>
 
 
-        <section class="skillSect darkSection">
+        <section class="skillSect darkSection" id="skillSection">
             <div class="wrapper">
                 <div class="skillContainer">
                     <div class="skillText">
                         <h2>My Skills</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo perferendis non veniam molestias magnam cupiditate optio quisquam, cum ipsa culpa temporibus neque, illum cumque exercitationem accusantium distinctio maxime sunt pariatur.
+                        <p>Able to build responsive, accessible websites using HTML5, CSS (as well as SCSS), and Vanilla Javascript.  Also experienced working in a React environment. Comfortable accessing APIs, and communicating with Firebase, and handling data meaningfully.</p>  
                         
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur pariatur labore ipsam minima cupiditate eaque animi. Ipsum sint atque cumque sed neque minus qui voluptatem, consequuntur aliquid, laborum incidunt?
-                        </p>
+                        <p>Capable of working in a collaborative coding environment, including using github for version control and paired programming.</p>
+                        
+                        <p>Also very confident with spreadsheets and handling data in a logical way.  Practicing coding at an introductory level with Python<i class="fab fa-python"></i> and <i class="devicon-c-plain"></i>.</p>
                     </div>
                     <div class="skillIconContainer">
                         <ul>
@@ -190,103 +186,123 @@
         </section>
 
         
-        <section class="projectSect lightSection">
+        <section class="projectSect lightSection"  id="projectSection">
             <div class="wrapper">
                 <div class="projectsText">
                     <h2>My Projects</h2>
-                    <p>something about my projects</p>
+                    <p>Showcase Of My Favourite Projects</p>
                 </div>
                 <div class="projectShowcaseContainer">
-                    <article class="projectClass">
+            <!-- PROJECT 1 -->
+                    <article class="projectClass" id="project1">
                         <div class="projectTopContainer">
-                            <p class="gitBox"><a href=""><i class="fab fa-git"></i></a></p>
-                            <a href="">
+                            <a href="https://github.com/The-Film-Factory/the-film-factory" class="gitBox">
+                                <div>
+                                    <i class="fab fa-git"></i>
+                                </div>
+                            </a>
+                            <a href="https://thfilmfactory.netlify.app/">
                                 <div class="imgBox">
                                     <img src="./styles/assets/filmFactory_color.jpg" alt="">
                                 </div>
                                 <div class="projectInfo">
-                                    <!-- link to repo -->
-                                    <h3>Project Title</h3>
-                                    <p class="projectCourse">Project Course</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis laborum laudantium sed aspernatur. Sint ratione labore omnis, deserunt aliquid dolorem non reiciendis fuga? Voluptatibus molestias hic optio ullam ab.</p>
+                                    <h3>The Film Factory</h3>
+                                    <p class="projectCourse">Juno Immersive WebDev Bootcamp Project 4</p>
+                                    <p>Group project showcasing ability to build product based on specific client request and broad design parameters. Coded with React, using routing for navigation, multiple linked API calls, and user information stored and accessed in Firebase</p>
                                 </div>
                             </a>
                         </div>
                         <ul>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
+                            <li><i class="fab fa-react"></i></li>
+                            <li><i class="devicon-firebase-plain"></i></li>
+                            <li><i class="fab fa-sass"></i></li>
+                            <li><i class="fab fa-github"></i></li>
+                            <li><i class="fas fa-mobile-alt"></i></li>
+                            <li class="collabs">Collaborated with: 
+                                <a href="https://www.danielnoordegraaf.com/">Daniel Noordegraaf</a>
+                                <a href="https://thuylinhdoan.com/">Linh Doan</a>
+                                <a href="#">Iris Chan</a>
+                            </li>  
                         </ul>
                     </article>
-                    <article class="projectClass">
+            <!-- PROJECT 2 -->
+                    <article class="projectClass" id="project2">
                         <div class="projectTopContainer">
-                            <p class="gitBox"><a href=""><i class="fab fa-git"></i></a></p>
-                            <a href="">
+                            <a href="https://github.com/RobKlassen/project3-react-blog" class="gitBox">
+                                <div>
+                                    <i class="fab fa-git"></i>
+                                </div>
+                            </a>
+                            <a href="https://cranky-goodall-f22954.netlify.app/">
                                 <div class="imgBox">
-                                    <img src="./styles/assets/filmFactory_color.jpg" alt="">
+                                    <img src="./styles/assets/robsBlogs_color.PNG" alt="">
                                 </div>
                                 <div class="projectInfo">
-                                    <!-- link to repo -->
-                                    <h3>Project Title</h3>
-                                    <p class="projectCourse">Project Course</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis laborum laudantium sed aspernatur. Sint ratione labore omnis, deserunt aliquid dolorem non reiciendis fuga? Voluptatibus molestias hic optio ullam ab.</p>
+                                    <h3>Robs Blogs</h3>
+                                    <p class="projectCourse">Juno Immersive WebDev Bootcamp Project 3</p>
+                                    <p>Solo project showcasing an understanding of complicated interactions between Firebase and React, saving and storing user information nested layers deep simulating a multi-topic Blog.</p>
                                 </div>
                             </a>
                         </div>
                         <ul>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
+                            <li><i class="fab fa-react"></i></li>
+                            <li><i class="fab fa-css3-alt"></i></li>
+                            <li><i class="devicon-firebase-plain"></i></li>
+                            <li><i class="fas fa-mobile-alt"></i></li>
                         </ul>
                     </article>
-                    <article class="projectClass">
+            <!-- PROJECT 3 -->
+                    <article class="projectClass" id="project3">
                         <div class="projectTopContainer">
-                            <p class="gitBox"><a href=""><i class="fab fa-git"></i></a></p>
-                            <a href="">
+                            <a href="https://github.com/RobKlassen/project2-api-AirQuality-JC-RK" class="gitBox">
+                                <div>
+                                    <i class="fab fa-git"></i>
+                                </div>
+                            </a>
+                            <a href="https://confident-albattani-5a6d1e.netlify.app/">
                                 <div class="imgBox">
-                                    <img src="./styles/assets/filmFactory_color.jpg" alt="">
+                                    <img src="./styles/assets/airQuality_color.PNG" alt="">
                                 </div>
                                 <div class="projectInfo">
-                                    <!-- link to repo -->
-                                    <h3>Project Title</h3>
-                                    <p class="projectCourse">Project Course</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis laborum laudantium sed aspernatur. Sint ratione labore omnis, deserunt aliquid dolorem non reiciendis fuga? Voluptatibus molestias hic optio ullam ab.</p>
+                                    <h3>Air Quality Finder</h3>
+                                    <p class="projectCourse">Juno Immersive WebDev Bootcamp Project 2</p>
+                                    <p>Paired programming exercise allowing user to access air quality of cities, showcasing multiple API calls and using data in meaningful and interesting ways.  Focus on rigorous error handling, informative CSS animations, and organized Vanilla JS practices</p>
                                 </div>
                             </a>
                         </div>
                         <ul>
                             <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
+                            <li><i class="fab fa-sass"></i></li>
+                            <li><i class="fab fa-js-square"></i></li>
+                            <li><i class="fab fa-github"></i></li>
+                            <li><i class="fas fa-mobile-alt"></i></li>
+                            <li class="collabs">Collaborated with: <a href="#">Jun Choi</a></li>                                    
                         </ul>
                     </article>
-                    <article class="projectClass">
+            <!-- PROJECT 4 -->                    
+                    <article class="projectClass" id="project4">
                         <div class="projectTopContainer">
-                            <p class="gitBox"><a href=""><i class="fab fa-git"></i></a></p>
-                            <a href="">
+                            <a href="https://github.com/RobKlassen/spaceJunk" class="gitBox">
+                                <div>
+                                    <i class="fab fa-git"></i>
+                                </div>
+                            </a>
+                            <a href="https://youthful-shannon-3c8e6a.netlify.app">
                                 <div class="imgBox">
-                                    <img src="./styles/assets/filmFactory_color.jpg" alt="">
+                                    <img src="./styles/assets/spacejunk_color.png" alt="">
                                 </div>
                                 <div class="projectInfo">
-                                    <!-- link to repo -->
-                                    <h3>Project Title</h3>
-                                    <p class="projectCourse">Project Course</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perferendis laborum laudantium sed aspernatur. Sint ratione labore omnis, deserunt aliquid dolorem non reiciendis fuga? Voluptatibus molestias hic optio ullam ab.</p>
+                                    <h3>Space Junk</h3>
+                                    <p class="projectCourse">Juno College Accelerated JavaScript Project 2</p>
+                                    <p>Accesses three different space-themed APIs to produce interactive visual components - a to scale solar system planet size comparison module, a random APOD picture, and a Live ISS position tracker</p>
                                 </div>
                             </a>
                         </div>
                         <ul>
                             <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
-                            <li><i class="fab fa-html5"></i></li>
+                            <li><i class="fab fa-sass"></i></li>
+                            <li><i class="fab fa-js-square"></i></li>
+                            <li><i class="devicon-jquery-plain-wordmark"></i></li>
                         </ul>
                     </article>
                 </div>
@@ -294,7 +310,7 @@
         </section>
 
 
-        <section class="contactSect darkSection">
+        <section class="contactSect darkSection"  id="contactSection">
             <div class="wrapper">
                 <div class="contactContainer">
                     <div class="contactText">
@@ -302,46 +318,47 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta </p>
                     </div>
                     <div class="lowerHalf">
-                        <form action="">
+                        <form action="https://formsubmit.co/klassen.rob@gmail.com" method="POST">
 
                             <div class="topInputs">
 
                                 <div class="inputBox">
-                                    <label for="">Your Name: </label>
-                                    <input type="text">
+                                    <label for="nameInput">Your Name: </label>
+                                    <input type="text" name="name" id="nameInput" required>
                                 </div>
 
                                 <div class="inputBox">
-                                    <label for="">Your Email: </label>
-                                    <input type="text">
+                                    <label for="emailInput">Your Email: </label>
+                                    <input type="email" name="email" id="emailInput">
                                 </div>
 
                             </div>
 
                             <div class="bottomInput">
-                                <label for="">Your Message</label>
-                                <textarea name="" id=""></textarea>
+                                <label for="messageInput">Your Message</label>
+                                <textarea name="message" id="messageInput"></textarea>
                             </div>
 
-                            <button>Send Message <i class="fas fa-paper-plane"></i></button>
+                            <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
 
                         </form>
                         <ul>
                             <li>
+                                <p>Klassen.Rob@gmail.com<span>  ―</span></p>
                                 <i class="fas fa-envelope-square"></i>
-                                <p><span>―  </span>Klassen.Rob@gmail.com</p>
                                 
                             </li>
                             <li>
+                                <p>rob-klassen<span>  ―</span></p>
                                <i class="fab fa-linkedin-in"></i>
-                                <p><span>―  </span>rob-klassen</p>
                             </li>
                             <li>
+                                <p>905-931-0432<span>  ―</span></p>
                                 <i class="fas fa-phone-volume"></i>
-                                <p><span>―  </span>905-931-0432</p>
                             </li>
                         </ul>
                     </div>
+                    <img src="./styles/assets/rkcodelogo13.png" alt="" class="rkcodeLogo">
                 </div>
             </div>
         </section>

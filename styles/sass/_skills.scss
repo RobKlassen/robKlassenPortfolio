@@ -22,9 +22,11 @@
             p{
                 color:$colorTextWhite;
                 margin-top:5%;
+                text-align: justify;
+                text-justify: auto;
             }
             h2{
-                // color: $colorTextWhite;
+                font-variant: small-caps;
                 font-weight: 900;
                 font-size:2rem; 
             }
