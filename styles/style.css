@@ -661,6 +661,94 @@ header .mainTextContainer button {
   height: 50px;
   margin-top: 50px;
 }
+header .popoutForm {
+  width: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header .popoutForm .topInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header .popoutForm .topInputs .inputBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .popoutForm .topInputs .inputBox label {
+  width: 175px;
+  color: #fbc25e;
+}
+header .popoutForm .topInputs .inputBox input {
+  width: 100%;
+  color: white;
+  margin: 10px 0 10px 10px;
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: #333132;
+}
+header .popoutForm .topInputs .inputBox input:focus {
+  padding: 3px;
+  outline: none;
+  border: solid 2px #090a0e;
+}
+header .popoutForm .bottomInput {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+header .popoutForm .bottomInput label {
+  color: #fbc25e;
+}
+header .popoutForm .bottomInput textarea {
+  width: 100%;
+  height: 200px;
+  color: white;
+  padding: 5px;
+  margin-top: 5px;
+  border: none;
+  background: #333132;
+  width: 100%;
+  resize: none;
+}
+header .popoutForm .bottomInput textarea:focus {
+  padding: 3px;
+  outline: none;
+  border: solid 2px #090a0e;
+}
+header .popoutForm button {
+  margin-top: 10px;
+  height: 50px;
+  width: 200px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 
 @media (max-width: 700px) {
   header .topNav {
@@ -1597,7 +1685,7 @@ header .mainTextContainer h3 {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.contactSect .wrapper .contactContainer .lowerHalf ul li {
+.contactSect .wrapper .contactContainer .lowerHalf ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1612,19 +1700,26 @@ header .mainTextContainer h3 {
           align-items: center;
   margin: 20px 0;
 }
-.contactSect .wrapper .contactContainer .lowerHalf ul li i {
+.contactSect .wrapper .contactContainer .lowerHalf ul li a i {
   font-size: 1.5rem;
   color: #54668b;
 }
-.contactSect .wrapper .contactContainer .lowerHalf ul li span {
+.contactSect .wrapper .contactContainer .lowerHalf ul li a span {
   font-weight: 900;
   color: #d3d5d9;
   width: 20px;
   margin-right: 12px;
 }
-.contactSect .wrapper .contactContainer .lowerHalf ul li p {
+.contactSect .wrapper .contactContainer .lowerHalf ul li a p {
   white-space: nowrap;
   font-size: 0.8rem;
+  color: #fbc25e;
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul li a:hover {
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul li a:hover i {
   color: #fbc25e;
 }
 .contactSect .wrapper .contactContainer .rkcodeLogo {
@@ -1632,6 +1727,12 @@ header .mainTextContainer h3 {
   width: 30%;
   right: 5%;
   top: 5%;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+}
+.contactSect .wrapper .contactContainer .rkcodeLogo:hover {
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
 }
 
 @media (max-width: 1200px) {
@@ -1658,13 +1759,13 @@ header .mainTextContainer h3 {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .contactSect .wrapper .contactContainer .lowerHalf ul li {
+  .contactSect .wrapper .contactContainer .lowerHalf ul li a {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .contactSect .wrapper .contactContainer .lowerHalf ul li span {
+  .contactSect .wrapper .contactContainer .lowerHalf ul li a span {
     margin-left: 6px;
   }
   .contactSect .wrapper .contactContainer .rkcodeLogo {
@@ -1705,6 +1806,8 @@ header .mainTextContainer h3 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1712,7 +1815,7 @@ header .mainTextContainer h3 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .contactSect .wrapper .contactContainer .lowerHalf ul li p {
+  .contactSect .wrapper .contactContainer .lowerHalf ul li a p {
     text-align: center;
   }
   .contactSect .wrapper .contactContainer .rkcodeLogo {
@@ -1750,6 +1853,16 @@ footer .wrapper .footerContainer {
 footer .wrapper .footerContainer p {
   font-size: 0.8rem;
   color: #3d4761;
+}
+footer .wrapper .footerContainer .moreCredits {
+  text-align: center;
+}
+footer .wrapper .footerContainer .moreCredits a {
+  font-size: 0.8rem;
+  color: #3d4761;
+}
+footer .wrapper .footerContainer .moreCredits p {
+  margin: 7px 0;
 }
 
 .hideSlideout {
@@ -1794,4 +1907,27 @@ footer .wrapper .footerContainer p {
   color: #fbc25e;
   -webkit-filter: drop-shadow(0 0 5px #fbc25e);
           filter: drop-shadow(0 0 5px #fbc25e);
+}
+
+.overlayJSClass {
+  background-color: #191d28;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2359626f' fill-opacity='0.5' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-clip-path: polygon(52% 17%, 88% 31%, 88% 73%, 53% 89%, 20% 70%, 20% 33%);
+          clip-path: polygon(52% 17%, 88% 31%, 88% 73%, 53% 89%, 20% 70%, 20% 33%);
+  opacity: 0.9;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

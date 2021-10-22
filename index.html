@@ -46,13 +46,13 @@
             <li><a href="#skillSection">Skills</a></li>
             <li id="projectDropdown"><a>Projects</a>
                 <ul class="slideoutProjectList invisible" id="slideoutProjectList">
-                    <li><a href="#project1">Project 1</a></li>
+                    <li><a href="#project1">The Film Factory</a></li>
                     <!-- ======================================= -->
                     <!-- ==========ADD TITLES=============== -->
                     <!-- ======================================= -->
-                    <li><a href="#project2">Project 2</a></li>
-                    <li><a href="#project3">Project 3</a></li>
-                    <li><a href="#project4">Project 4</a></li>
+                    <li><a href="#project2">Robs Blogs</a></li>
+                    <li><a href="#project3">Air Quality Finder</a></li>
+                    <li><a href="#project4">Space Junk</a></li>
                 </ul>
             </li>
             <li><a href="#contactSection">Contact</a></li>
@@ -82,7 +82,7 @@
                 <li><a href="#projectSection">Projects</a></li>
                 <li><a href="#contactSection">Contact</a></li>
             </ul>
-            <a href="#contactSection">
+            <a href="" id="mailMeBoxTopRight">
                 <div class="mailMeBox">
                     <p><i class="far fa-envelope"></i></p>
                 </div>
@@ -95,7 +95,32 @@
             <h2>Front-End Web Developer</h2>
             <button id="seeWorkButton">See Work</button>
         </div>
+
+<!--================================================ -->
+        <form action="https://formsubmit.co/0de5dea7ef234fe24c27964f3fcc22ff" method="POST" class="popoutForm invisible" id="popupForm">
+            <div class="topInputs">
+                <div class="inputBox">
+                    <label for="nameInput">Your Name: </label>
+                    <input type="text" name="name" id="nameInput" required>
+                </div>
+                <div class="inputBox">
+                    <label for="emailInput">Your Email: </label>
+                    <input type="email" name="email" id="emailInput">
+                </div>
+            </div>
+            <div class="bottomInput">
+                <label for="messageInput">Your Message</label>
+                <textarea name="message" id="messageInput"></textarea>
+            </div>
+            <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+<!--================================================ -->
+
+
+
     </header>
+
+
 
     <main>
         <section class="aboutSect lightSection" id="aboutSection">
@@ -330,7 +355,7 @@
                         <p>Send a message below! I'm always interested in meeting new people and having a chat. I'm Currently available to hire! </p>
                     </div>
                     <div class="lowerHalf">
-                        <form action="https://formsubmit.co/0de5dea7ef234fe24c27964f3fcc22ff" method="POST" id="formBottom">
+                        <form action="https://formsubmit.co/0de5dea7ef234fe24c27964f3fcc22ff" method="POST">
 
                             <div class="topInputs">
 
@@ -355,20 +380,26 @@
 
                         </form>
                         <ul>
-                            <li>
-                                <p>rob-klassen</p>
-                                <span> ― </span>
-                               <i class="fab fa-linkedin-in"></i>
+                            <li> 
+                                <a href="">
+                                    <p>rob-klassen</p>
+                                    <span> ― </span>
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
                             </li>
                             <li>
-                                <p>905-931-0432</p>
-                                <span> ― </span>
-                                <i class="fas fa-phone-volume"></i>
+                                <a href="">
+                                    <p>905-931-0432</p>
+                                    <span> ― </span>
+                                    <i class="fas fa-phone-volume"></i>
+                                </a>
                             </li>
                             <li>
-                                <p>Klassen.Rob@gmail.com</p>
-                                <span> ― </span>
-                                <i class="fas fa-envelope-square"></i>
+                                <a href="">
+                                    <p>Klassen.Rob@gmail.com</p>
+                                    <span> ― </span>
+                                    <i class="fas fa-envelope-square"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -383,16 +414,17 @@
         <div class="wrapper">
             <div class="footerContainer">
                 <p>Created by Rob Klassen - 2021 - Juno College of Technology something something bootcamp</p>
-                <p>Click For More Credits </p>
-                <div class="moreCredits invisible">
-                    <p>Design by marveltheme - Themeforest.com</p>
-                    <p>Slideout background SVG from www.heropatterns.com/</p> 
-                    <p>clip path from https://bennettfeely.com/clippy/</p>
-                    <p>form submission and email forwarding through https://formsubmit.co/</p>
+                <a href="" id="moreCreditsToggleID">See Resources Used for my Website</a>
+                <div class="moreCredits invisible" id="moreCreditsID">
+                    <p>Design by marveltheme - purchased from <a href="Themeforest.com">Themeforest.com</a></p>
+                    <p>Slideout background SVG from <a href="www.heropatterns.com/">heropatterns.com</a></p> 
+                    <p>clip path tool from <a href="https://bennettfeely.com/clippy/">BennetFeely.com</a></p>
+                    <p>form submission and email forwarding through <a href="https://formsubmit.co/">FormSubmit.co</a></p>
                 </div>
             </div>
         </div>
     </footer>
+
 
 <script src="scripts.js"></script>
 </body>

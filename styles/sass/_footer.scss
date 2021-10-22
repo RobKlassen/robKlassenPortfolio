@@ -12,6 +12,16 @@ footer{
                 font-size:0.8rem;
                 color:$colorMainBrightDarkBlue;
             }
+            .moreCredits{
+                text-align: center;
+                a{
+                    font-size:0.8rem;
+                    color:$colorMainBrightDarkBlue;
+                }
+                p{
+                    margin:7px 0;
+                }
+            }
         }
     }
 }
