@@ -1,10 +1,12 @@
 .contactSect{
     height:100%;
     position: relative;
+    
     .wrapper{
         display:flex;
         justify-content: center;
         align-items: center;
+
         .contactContainer{
             position:relative;
             height:100%;
@@ -14,6 +16,7 @@
             display:flex;
             flex-direction: column;
             background-color: $colorDarkBlue;
+
             .contactText{
                 width:66%;
                 h2{
@@ -28,6 +31,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+
                 form{
                     width:66%;
                     display:flex;
@@ -36,11 +40,13 @@
                     .topInputs{
                         display:flex;
                         flex-direction: column;
+
                         .inputBox{
                             width:100%;
                             display:flex;
                             flex-direction: row;
                             align-items: center;
+
                             label{
                                 width:175px;
                                 color:$colorYellow;
@@ -68,6 +74,7 @@
                         display:flex;
                         flex-direction: column;
                         margin-top:10px;
+
                         label{
                             color:$colorYellow;
                         }
@@ -77,14 +84,12 @@
                             height:200px;
                             color:white;
                             padding:5px;
-
                             margin-top:5px;
-
                             border:none;
                             background: $colorDarkYellow;
-
                             width:100%;
                             resize: none;
+
                             &:focus{
                                 padding:3px;
                                 outline: none;
@@ -109,12 +114,14 @@
                     display:flex;
                     flex-direction: column;
                     align-items: flex-end;
+
                     li{
                         display: flex;
                         flex-direction: row;
                         align-content: center;
                         align-items: center;
                         margin:20px 0;
+
                         i{
                             font-size:1.5rem;
                             color:$colorTextSecondaryBlue;
@@ -150,40 +157,13 @@
             .contactContainer{
                 .contactText{
                     width:100%;
-                    h2{
-                    }
-                    p{
-                    }
                 }
                 .lowerHalf{
                     flex-direction: column;
+
                     form{
                         width:100%;
-        
-                        .topInputs{
 
-                            .inputBox{
-
-                                label{
-
-                                }
-                                input{
-        
-                                    &:focus{
-
-                                    }
-                                }
-                            }
-                        }
-                        .bottomInput{
-                            label{
-                            }
-                            
-                            textarea{
-                                &:focus{
-                                }
-                            }
-                        }
                         button{
                             align-self: flex-end;
                         }
@@ -191,16 +171,12 @@
                     ul{
                         align-self: start;
                         align-items: flex-start;
+
                         li{
                             flex-direction: row-reverse;
-                            i{
-                            }
                             span{
                                 margin-left: 6px;
-                            }
-                            p{
-                            }
-                            
+                            }             
                         }
                     }
                 }
@@ -216,35 +192,15 @@
     .contactSect{
         .wrapper{
             .contactContainer{
-                .contactText{
-                    h2{
-                    }
-                    p{
-                    }
-                }
                 .lowerHalf{
                     form{
-        
                         .topInputs{
                             .inputBox{
                                 flex-direction: column;
                                 align-items: flex-start;
-                                label{
-                                }
+
                                 input{
                                     margin: 10px 0 10px 0;
-        
-                                    &:focus{
-                                    }
-                                }
-                            }
-                        }
-                        .bottomInput{
-                            label{
-                            }
-                            
-                            textarea{
-                                &:focus{
                                 }
                             }
                         }
@@ -264,10 +220,6 @@
                             flex: 1 0 auto;
                             display: flex;
                             justify-content: center;
-                            i{
-                            }
-                            span{
-                            }
                             p{
                                 text-align: center;
                             }

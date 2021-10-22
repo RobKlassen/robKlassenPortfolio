@@ -138,7 +138,12 @@ app.imageClick = function(cycle){
     });
 }
 
-
+app.handleSubmit = function(){
+    const formBottom = document.getElementById('formBottom');
+    formBottom.addEventListener('submit', function(e){
+        e.preventDefault();
+    })
+}
 
 
 app.init = function(){
@@ -147,6 +152,7 @@ app.init = function(){
     app.projectListDropdownHandler();
     app.snapToSpotHandler();
     app.imageClick(1);
+    app.handleSubmit();
 }
 
 app.init();
