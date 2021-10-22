@@ -661,94 +661,6 @@ header .mainTextContainer button {
   height: 50px;
   margin-top: 50px;
 }
-header .popoutForm {
-  width: 66%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-header .popoutForm .topInputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-header .popoutForm .topInputs .inputBox {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-header .popoutForm .topInputs .inputBox label {
-  width: 175px;
-  color: #fbc25e;
-}
-header .popoutForm .topInputs .inputBox input {
-  width: 100%;
-  color: white;
-  margin: 10px 0 10px 10px;
-  padding: 5px;
-  width: 100%;
-  height: 40px;
-  border: none;
-  background: #333132;
-}
-header .popoutForm .topInputs .inputBox input:focus {
-  padding: 3px;
-  outline: none;
-  border: solid 2px #090a0e;
-}
-header .popoutForm .bottomInput {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 10px;
-}
-header .popoutForm .bottomInput label {
-  color: #fbc25e;
-}
-header .popoutForm .bottomInput textarea {
-  width: 100%;
-  height: 200px;
-  color: white;
-  padding: 5px;
-  margin-top: 5px;
-  border: none;
-  background: #333132;
-  width: 100%;
-  resize: none;
-}
-header .popoutForm .bottomInput textarea:focus {
-  padding: 3px;
-  outline: none;
-  border: solid 2px #090a0e;
-}
-header .popoutForm button {
-  margin-top: 10px;
-  height: 50px;
-  width: 200px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
 
 @media (max-width: 700px) {
   header .topNav {
@@ -1168,7 +1080,6 @@ header .mainTextContainer h3 {
   -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
           clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   background: #191d28;
-  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1182,12 +1093,23 @@ header .mainTextContainer h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div i {
   font-size: 3rem;
   color: #bbc3dc;
   -webkit-filter: drop-shadow(0 0 5px #54668b);
           filter: drop-shadow(0 0 5px #54668b);
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div:hover {
+  background: #292f40;
+}
+.projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div:hover i {
+  font-size: 3.2rem;
+  color: #fbc25e;
+  -webkit-filter: drop-shadow(0 0 5px #fbc25e);
+          filter: drop-shadow(0 0 5px #fbc25e);
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a {
   display: -webkit-box;
@@ -1382,6 +1304,7 @@ header .mainTextContainer h3 {
   .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover .gitBox {
     background: #bbc3dc;
     right: 12%;
+    z-index: 50;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass ul {
     -webkit-box-orient: horizontal;
@@ -1912,22 +1835,150 @@ footer .wrapper .footerContainer .moreCredits p {
 .overlayJSClass {
   background-color: #191d28;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2359626f' fill-opacity='0.5' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  -webkit-clip-path: polygon(52% 17%, 88% 31%, 88% 73%, 53% 89%, 20% 70%, 20% 33%);
-          clip-path: polygon(52% 17%, 88% 31%, 88% 73%, 53% 89%, 20% 70%, 20% 33%);
-  opacity: 0.9;
-  width: 100vw;
-  height: 100vh;
+  border: solid 1px #fbc25e;
+  -webkit-box-shadow: inset 0 0 5px #191d28;
+          box-shadow: inset 0 0 5px #191d28;
+  opacity: 0.98;
+  width: 60vw;
+  height: 60vh;
+  max-width: 1000px;
+  max-height: 800px;
   position: fixed;
   top: 0;
-  left: 0;
+  margin-left: 15%;
+  margin-top: 15%;
   z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 20px;
+}
+.overlayJSClass h3 {
+  font-size: 2rem;
+  color: #bbc3dc;
+  font-variant: small-caps;
+  margin-bottom: 10px;
+}
+.overlayJSClass .topInputs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.overlayJSClass .topInputs .inputBox {
+  width: 100%;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.overlayJSClass .topInputs .inputBox label {
+  width: 175px;
+  color: #fbc25e;
+}
+.overlayJSClass .topInputs .inputBox input {
+  width: 100%;
+  color: white;
+  margin: 1% 0 1% 1%;
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: #333132;
+}
+.overlayJSClass .topInputs .inputBox input:focus {
+  padding: 3px;
+  outline: none;
+  border: solid 2px #090a0e;
+}
+.overlayJSClass .bottomInput {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+.overlayJSClass .bottomInput label {
+  color: #fbc25e;
+}
+.overlayJSClass .bottomInput textarea {
+  width: 100%;
+  color: white;
+  padding: 5px;
+  margin-top: 5px;
+  border: none;
+  background: #333132;
+  width: 100%;
+  resize: none;
+}
+.overlayJSClass .bottomInput textarea:focus {
+  padding: 3px;
+  outline: none;
+  border: solid 2px #090a0e;
+}
+.overlayJSClass button {
+  margin-top: 10px;
+  height: 50px;
+  width: 200px;
+  margin-left: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media (max-width: 700px) {
+  .overlayJSClass {
+    height: 80vh;
+  }
+  .overlayJSClass .topInputs .inputBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .overlayJSClass .bottomInput {
+    height: 100%;
+  }
+  .overlayJSClass .bottomInput textarea {
+    height: 100%;
+  }
+  .overlayJSClass button {
+    height: 50px;
+    width: 92%;
+    margin-left: 10px;
+  }
 }

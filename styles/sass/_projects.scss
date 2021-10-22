@@ -51,16 +51,26 @@
                             height:100px;
                             clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
                             background:$colorDarkBlue;
-                            height:100px;
                             display:flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
-
+                            transition: ease all 0.2s;
+                            
                             i{
                                 font-size: 3rem;
                                 color:$colorMainBrightLightBlue;
                                 filter: drop-shadow(0 0 5px $colorTextSecondaryBlue);
+                            }
+                            &:hover{
+                                background: $colorMediumBlue;
+                                i{
+                                    font-size: 3.2rem;
+                                    color:$colorYellow;
+                                    filter: drop-shadow(0 0 5px $colorYellow);
+
+                                }
+    
                             }
                         }
                     }
@@ -268,6 +278,7 @@
                 .gitBox{
                     background: $colorMainBrightLightBlue;
                     right:12%;
+                    z-index: 50;
                 }
             }
         }
