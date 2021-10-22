@@ -138,129 +138,52 @@ app.imageClick = function(cycle){
     });
 }
 
-app.handleSubmit = function(){
-    const formBottom = document.getElementById('formBottom');
-    formBottom.addEventListener('submit', function(e){
+app.popUpForm = function(visibilityBool){
+    const mailMeBox = document.getElementById("mailMeBoxTopRight");
+    const formOverlay = document.getElementById('popupForm');
+    let visibility = visibilityBool;
+
+    mailMeBox.addEventListener('click', function(e){
         e.preventDefault();
-    })
+        if (visibility === false){
+            app.toggleClasses(formOverlay, 'overlayJSClass', "invisible");
+            visibility = true;
+        } else {
+            visibility = false;
+            app.toggleClasses(formOverlay, 'invisible', 'overlayJSClass');
+        }   
+    });
 }
 
+app.moreCreditsButton = function(bool){
+    const moreCreditsToggle = document.getElementById('moreCreditsToggleID');
+    const moreCredits = document.getElementById('moreCreditsID');
+    let toggle = bool;
+    moreCreditsToggle.addEventListener('click', function(e){
+        e.preventDefault();
+        if (toggle === false){
+            moreCreditsToggleID.innerText = "Hide Resources";
+            app.toggleClasses(moreCredits, "visible", "invisible");
+            toggle = true;
+        } else {
+            moreCreditsToggleID.innerText = "Show Resources Again";
+            app.toggleClasses(moreCredits, "invisible", "visible");
+            toggle = false;
+        }
+    })
+
+}
 
 app.init = function(){
-    // app.removeClassSelector();
     app.slideOutHandler(false);
     app.projectListDropdownHandler();
     app.snapToSpotHandler();
     app.imageClick(1);
-    app.handleSubmit();
+    app.popUpForm(false);
+    app.moreCreditsButton(false);
 }
 
 app.init();
 
 
 
-
-
-
-
-
-
-//==============================================================
-///
-//INSIDE DROPDOWN HANDLER
-//
-    // for (let option of menuItem){
-    //     let subMenuItemCount = option.children;
-
-    //     if (subMenuItemCount.length > 1){
-
-    //         for (let subMenuItem of subMenuItemCount){
-    //             subMenuItem.addEventListener('click', function(){
-    //                 console.log(this);
-    //             })
-    //             // console.log(subMenuItem);
-    //         }
-
-
-
-            // let finalOptions = subMenuItemCount.children; 
-            // console.log(finalOptions);
-            // for (let finalOption of finalOptions){
-                // finalOption.addEventListener('click', function(){
-                //     console.log(this);
-                // })
-            // }
-
-        // }       
-        
-        // option.addEventListener('click', function(){
-            // const childrenCount = Object.keys(this.children[1].childElementCount);
-            // console.log(this);
-
-        // })
-    // }
-
-
-
-
-
-    // console.log(menuItem);
-
-    // slideoutMenu.addEventListener('click', function(){
-        // console.log("you've clicked the slideout menu");
-        // console.log(slideoutMenu);
-        // console.log(menuItem);
-    // });
-
-    // for (option in menuItem){
-    //     option.addEventListener('click', function(){
-
-    //     })
-    // }
-    // menuItem.addEventListener('click',function(){
-    //     console.log(this);
-    // });
-    // menuItem
-    // menuItem.addEventListener('click', function(){
-    //     console.log("you've clicked it");
-    // })
-
-
-    // const projectDropdown = document.querySelector('#slideoutProjectList');
-    // const sideNavSlideoutContact = document.querySelector("#sideNavSlideoutContact");
-    // projectDropdown.addEventListener('click', function(){
-    //     app.toggleClasses(projectDropdown.children, "", "");
-    //     app.toggleClasses(sideNavSlideoutContact, "", "")
-    // })
-    //==============================================================
-
-
-
-
-
-
-// slideoutButton.addEventListener('click', function(){
-//     console.log("you clicked it", slideOutToggle);
-//     slideOutToggle = !slideOutToggle
-//     if (slideOutToggle === true){
-//         // slideoutPage.classList.remove("hideSlideout");
-//         // slideoutPage.classList.add("showSlideout");
-//         // slideoutButton.classList.remove("emptyCircle");
-//         // slideoutButton.classList.add("fullCircle");
-//     } else if (slideOutToggle === false) {
-//         // slideoutPage.classList.remove("showSlideout");
-//         // slideoutPage.classList.add("hideSlideout");
-//         // slideoutButton.classList.add("emptyCircle");
-//         // slideoutButton.classList.remove("fullCircle");
-
-//     }
-// });
-// }
-
-
-
-// The data analytics bootcamp has been coming up a lot,
-
-// is it something that any webdev grads (who are interested in that) could or should consider looking into to further skills and job opportunities in the industry, or generally are the skills so non-transferable that generally it's not recommended to do 'both' 
-
-// or more broadly, if I had questions about the data analytics bootcamp where I could direct them?
