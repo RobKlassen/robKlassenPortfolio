@@ -317,6 +317,16 @@ button:hover:active, button:focus:active {
   background-color: #292f40;
 }
 
+.rkcodeLogoBottom {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
 .sidebarNavigation {
   width: 100px;
   height: 100vh;
@@ -434,6 +444,24 @@ button:hover:active, button:focus:active {
           filter: drop-shadow(0 0 5px #fbc25e);
 }
 
+@media (max-width: 700px) {
+  .sidebarNavigation {
+    height: 50px;
+    width: 50px;
+    z-index: 100;
+  }
+  .sidebarNavigation .logoContainer {
+    height: 50px;
+    width: 50px;
+    background: #191d28;
+  }
+  .sidebarNavigation .sideNavButton {
+    display: none;
+  }
+  .sidebarNavigation .sideNavIcons {
+    display: none;
+  }
+}
 .sideNavSlideout {
   background-color: #191d28;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2359626f' fill-opacity='0.5' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -475,6 +503,11 @@ button:hover:active, button:focus:active {
 .sideNavSlideout ul li .slideoutProjectList {
   width: 100%;
   margin-top: 5px;
+}
+@media (max-width: 700px) {
+  .sideNavSlideout {
+    display: none;
+  }
 }
 header {
   background-color: #292f40;
@@ -629,6 +662,60 @@ header .mainTextContainer button {
   margin-top: 50px;
 }
 
+@media (max-width: 700px) {
+  header .topNav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    z-index: 80;
+  }
+  header .topNav .mailMeBox {
+    width: 10%;
+    height: 50px;
+    -webkit-transition: ease all 0.2s;
+    transition: ease all 0.2s;
+  }
+  header .topNav .mailMeBox:hover, header .topNav .mailMeBox:focus {
+    width: 75px;
+    height: 75px;
+  }
+  header .topNav .mailMeBox p {
+    font-size: 1rem;
+  }
+  header .mainTextContainer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 0;
+    width: 66%;
+    height: calc(100vh - 200px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .mainTextContainer h1,
+header .mainTextContainer h2,
+header .mainTextContainer h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 570px) {
+  header .topNav ul {
+    width: calc(90% - 50px);
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: space-evenly;
+        -ms-flex-align: space-evenly;
+            align-items: space-evenly;
+  }
+  header .topNav ul li:last-child {
+    display: none;
+  }
+}
 .aboutSect .aboutContainer {
   margin: 10% 0;
   display: -webkit-box;
@@ -707,6 +794,7 @@ header .mainTextContainer button {
   font-weight: 600;
 }
 .aboutSect .aboutContainer .aboutMeContainer .aboutMeText h3 {
+  color: #3d4862;
   font-weight: 900;
   font-size: 1.5rem;
 }
@@ -721,6 +809,55 @@ header .mainTextContainer button {
   margin-top: 50px;
 }
 
+@media (max-width: 1080px) {
+  .aboutSect .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutSect .aboutContainer .imageContainer {
+    width: 50%;
+    margin-top: 50px;
+  }
+  .aboutSect .aboutContainer .aboutMeContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutSect .aboutContainer .aboutMeContainer .aboutMeText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2,
+.aboutSect .aboutContainer .aboutMeContainer .aboutMeText h3 {
+    text-align: center;
+  }
+  .aboutSect .aboutContainer .aboutMeContainer .aboutMeText h2 {
+    position: relative;
+    font-size: 2rem;
+    color: #3d4862;
+  }
+}
 .skillSect {
   height: 100%;
 }
@@ -821,6 +958,45 @@ header .mainTextContainer button {
   color: #fbc25e;
 }
 
+@media (max-width: 1080px) {
+  .skillSect .skillContainer .skillText h2,
+.skillSect .skillContainer .skillText p {
+    text-align: left;
+    text-justify: none;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .iconPair {
+    width: 15%;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .iconPair p {
+    font-size: 2.5vw;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .iconPair p i {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 700px) {
+  .skillSect .skillContainer .skillText h2 {
+    text-align: center;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .iconPair {
+    width: 20%;
+    margin: 2%;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .iconPair p {
+    font-size: 2.5vw;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .iconPair p i {
+    font-size: 5vw;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .responsiveIcon p i {
+    font-size: 45vw;
+  }
+  .skillSect .skillContainer .skillIconContainer ul .responsiveIcon .responsiveText {
+    position: relative;
+    top: -50%;
+    color: #fbc25e;
+  }
+}
 .projectSect .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,6 +1030,7 @@ header .mainTextContainer button {
           align-items: center;
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,7 +1045,7 @@ header .mainTextContainer button {
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer {
   width: 90%;
-  height: 250px;
+  height: 215px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1007,7 +1184,8 @@ header .mainTextContainer button {
   color: #333132;
   margin: 10px;
 }
-.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs {
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs,
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabsOutside {
   width: 100%;
   text-align: end;
   display: -webkit-box;
@@ -1023,30 +1201,246 @@ header .mainTextContainer button {
   margin-right: 10%;
   color: #292f40;
 }
-.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a {
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a,
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabsOutside a {
   position: relative;
   font-weight: 600;
   color: #191d28;
   display: block;
 }
-.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a::after {
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a::after,
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabsOutside a::after {
   content: " - Visit Portfolio";
   color: #3d4761;
   font-weight: 300;
 }
-.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a:hover {
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a:hover,
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabsOutside a:hover {
   font-weight: 900;
   color: #292f40;
   -webkit-filter: drop-shadow(0 0 5px #191d28);
           filter: drop-shadow(0 0 5px #191d28);
 }
-.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a:hover::after {
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a:hover::after,
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabsOutside a:hover::after {
   left: 50px;
   font-weight: 600;
 }
+.projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside {
+  display: none;
+}
 
+@media (max-width: 1080px) {
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox {
+    right: -7rem;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox {
+    min-width: 50%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .projectInfo {
+    max-width: 400px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul {
+    width: 115%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul li i {
+    font-size: 1.5rem;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs {
+    text-align: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a::after {
+    content: "";
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a::before {
+    content: "Visit Portfolio - ";
+    color: #3d4761;
+    font-weight: 300;
+  }
+}
+@media (max-width: 810px) {
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox {
+    right: 12%;
+    top: 65%;
+    margin: 0rem;
+    background: #e8eefb;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox {
+    max-height: 50%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox img {
+    max-height: 50%;
+    min-height: 0;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover .gitBox {
+    background: #bbc3dc;
+    right: 12%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul li i {
+    font-size: 1.5rem;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs {
+    text-align: start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a::after {
+    content: "";
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a::before {
+    content: "";
+  }
+}
+@media (max-width: 700px) {
+  .projectSect .wrapper .projectShowcaseContainer .projectClass {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 2.5rem 0;
+    position: relative;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer {
+    width: 100%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div {
+    width: 100px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a {
+    padding-right: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox img {
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50;
+    z-index: 10;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover .gitBox {
+    right: 10px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 10%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul li {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs {
+    display: none;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 75%;
+    color: #292f40;
+    -webkit-transition: ease all 0.2s;
+    transition: ease all 0.2s;
+    padding-top: 10%;
+    z-index: 0;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a {
+    position: relative;
+    font-weight: 600;
+    color: #191d28;
+    display: block;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a::after {
+    content: " - Visit Portfolio";
+    color: #3d4761;
+    font-weight: 300;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a:hover {
+    font-weight: 900;
+    color: #292f40;
+    -webkit-filter: drop-shadow(0 0 5px #191d28);
+            filter: drop-shadow(0 0 5px #191d28);
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a:hover::after {
+    left: 50px;
+    font-weight: 600;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside:hover {
+    bottom: -40px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass:hover .collabsOutside {
+    bottom: -40px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass:hover .collabsOutsideTall {
+    bottom: -80px;
+  }
+}
 .contactSect {
   height: 100%;
+  position: relative;
 }
 .contactSect .wrapper {
   display: -webkit-box;
@@ -1079,6 +1473,7 @@ header .mainTextContainer button {
 }
 .contactSect .wrapper .contactContainer .contactText h2 {
   color: #d3d5d9;
+  font-variant: small-caps;
 }
 .contactSect .wrapper .contactContainer .contactText p {
   color: #717896;
@@ -1221,16 +1616,16 @@ header .mainTextContainer button {
   font-size: 1.5rem;
   color: #54668b;
 }
-.contactSect .wrapper .contactContainer .lowerHalf ul li p {
-  white-space: nowrap;
-  font-size: 0.8rem;
-  margin-right: 12px;
-  color: #fbc25e;
-}
-.contactSect .wrapper .contactContainer .lowerHalf ul li p span {
+.contactSect .wrapper .contactContainer .lowerHalf ul li span {
   font-weight: 900;
   color: #d3d5d9;
   width: 20px;
+  margin-right: 12px;
+}
+.contactSect .wrapper .contactContainer .lowerHalf ul li p {
+  white-space: nowrap;
+  font-size: 0.8rem;
+  color: #fbc25e;
 }
 .contactSect .wrapper .contactContainer .rkcodeLogo {
   position: absolute;
@@ -1239,6 +1634,99 @@ header .mainTextContainer button {
   top: 5%;
 }
 
+@media (max-width: 1200px) {
+  .contactSect .wrapper .contactContainer .contactText {
+    width: 100%;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf form {
+    width: 100%;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf form button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf ul {
+    -ms-flex-item-align: start;
+        align-self: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf ul li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf ul li span {
+    margin-left: 6px;
+  }
+  .contactSect .wrapper .contactContainer .rkcodeLogo {
+    top: 75%;
+  }
+}
+@media (max-width: 880px) {
+  .contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf form .topInputs .inputBox input {
+    margin: 10px 0 10px 0;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf form button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf ul {
+    background: #191d28;
+    padding: 0p;
+    margin: 0;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf ul li {
+    width: 175px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactSect .wrapper .contactContainer .lowerHalf ul li p {
+    text-align: center;
+  }
+  .contactSect .wrapper .contactContainer .rkcodeLogo {
+    display: none;
+  }
+  .contactSect .rkcodeLogoBottom {
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+  }
+}
 footer {
   background: #090a0e;
   z-index: 100;

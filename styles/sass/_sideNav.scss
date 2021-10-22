@@ -75,3 +75,72 @@
         }
     }
 }
+
+@media (max-width: 1440px){
+    
+}
+
+@media (max-width:1080px){
+
+}
+
+
+@media (max-width:700px){
+    .sidebarNavigation{
+        height:50px;
+        width:50px;
+        z-index: 100;
+       
+        .logoContainer{
+            height:50px;
+            width:50px;
+            background:$colorDarkBlue;
+            img{
+                // height:50px;
+                // width:50px;
+
+                &:hover{
+
+                }
+            }
+        }
+        .sideNavButton{
+            display:none;
+            span{
+
+                i{
+
+                }
+                .fas.fa-circle{
+
+                }
+                
+            }
+            &:hover{
+                .fas.fa-circle{
+
+                }
+                .fa-bars{
+
+                }
+            }
+        }
+        .sideNavIcons{
+            display:none;
+
+            ul{
+
+                li{
+
+                    a i{
+
+                        &:hover{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

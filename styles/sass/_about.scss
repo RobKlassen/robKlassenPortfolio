@@ -70,6 +70,7 @@
                     font-weight: 600;
                 }
                 h3{
+                    color: $colorTextSecondaryDark;
                     font-weight: 900;
                     font-size:1.5rem;
                 }
@@ -89,4 +90,53 @@
             }
         }
     }
+}
+
+@media (max-width: 1440px){
+    
+}
+
+@media (max-width:1080px){
+
+    .aboutSect{
+        .aboutContainer{
+            flex-direction: column;
+
+            .imageContainer{
+                width:50%;
+                margin-top:50px;
+            }
+            .aboutMeContainer{
+                width:100%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+
+                .aboutMeText{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h2,
+                    h3{
+                        text-align: center;
+                    }
+                    h2{
+                        position: relative;
+                        font-size:2rem;
+                        color:$colorTextSecondaryDark
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:700px){
+    
+}
+
+@media (max-width:570px){
+
 }

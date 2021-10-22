@@ -1,5 +1,6 @@
 .contactSect{
     height:100%;
+    position: relative;
     .wrapper{
         display:flex;
         justify-content: center;
@@ -17,6 +18,7 @@
                 width:66%;
                 h2{
                     color: $colorTextWhite;
+                    font-variant: small-caps;
                 }
                 p{
                     color: $colorTextSecondaryGrey;
@@ -117,15 +119,15 @@
                             font-size:1.5rem;
                             color:$colorTextSecondaryBlue;
                         }
+                        span{
+                            font-weight: 900;
+                            color:$colorTextWhite;
+                            width:20px;
+                            margin-right: 12px;
+                        }
                         p{
-                            span{
-                                font-weight: 900;
-                                color:$colorTextWhite;
-                                width:20px;
-                            }
                             white-space: nowrap;
                             font-size:0.8rem;
-                            margin-right: 12px;
                             color:$colorYellow;
                         }
                         
@@ -137,8 +139,163 @@
                 width:30%;
                 right:5%;
                 top:5%;
-                // height:100px;
             }
         }
     }
+}
+
+@media (max-width: 1200px){
+    .contactSect{
+        .wrapper{
+            .contactContainer{
+                .contactText{
+                    width:100%;
+                    h2{
+                    }
+                    p{
+                    }
+                }
+                .lowerHalf{
+                    flex-direction: column;
+                    form{
+                        width:100%;
+        
+                        .topInputs{
+
+                            .inputBox{
+
+                                label{
+
+                                }
+                                input{
+        
+                                    &:focus{
+
+                                    }
+                                }
+                            }
+                        }
+                        .bottomInput{
+                            label{
+                            }
+                            
+                            textarea{
+                                &:focus{
+                                }
+                            }
+                        }
+                        button{
+                            align-self: flex-end;
+                        }
+                    }
+                    ul{
+                        align-self: start;
+                        align-items: flex-start;
+                        li{
+                            flex-direction: row-reverse;
+                            i{
+                            }
+                            span{
+                                margin-left: 6px;
+                            }
+                            p{
+                            }
+                            
+                        }
+                    }
+                }
+                .rkcodeLogo{
+                    top:75%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:880px){
+    .contactSect{
+        .wrapper{
+            .contactContainer{
+                .contactText{
+                    h2{
+                    }
+                    p{
+                    }
+                }
+                .lowerHalf{
+                    form{
+        
+                        .topInputs{
+                            .inputBox{
+                                flex-direction: column;
+                                align-items: flex-start;
+                                label{
+                                }
+                                input{
+                                    margin: 10px 0 10px 0;
+        
+                                    &:focus{
+                                    }
+                                }
+                            }
+                        }
+                        .bottomInput{
+                            label{
+                            }
+                            
+                            textarea{
+                                &:focus{
+                                }
+                            }
+                        }
+                        button{
+                            align-self: flex-end;
+                        }
+                    }
+                    ul{
+                        background:$colorDarkBlue;
+                        padding:0p;
+                        margin: 0;
+                        width:100%;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        li{
+                            width: 175px;
+                            flex: 1 0 auto;
+                            display: flex;
+                            justify-content: center;
+                            i{
+                            }
+                            span{
+                            }
+                            p{
+                                text-align: center;
+                            }
+                            
+                        }
+                    }
+                }
+                .rkcodeLogo{
+                    display:none;
+                }
+            }
+        }
+        .rkcodeLogoBottom{
+            display:block;
+            position: absolute;
+            width:120px;
+            height:100px;
+            bottom:0;
+            right:0;
+               
+        }
+    }
+}
+
+@media (max-width:700px){
+    
+}
+
+@media (max-width:570px){
+
 }

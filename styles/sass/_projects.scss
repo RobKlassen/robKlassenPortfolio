@@ -19,14 +19,16 @@
             align-items: center;
 
             .projectClass{
+                position: relative;
                 display:flex;
                 flex-direction: column;
                 width:100%;
                 margin:1rem 0;
                 align-self: flex-start;
+
                 .projectTopContainer{
                     width:90%;
-                    height:250px;
+                    height:215px;
                     display:flex;
                     flex-direction: row-reverse;
                     align-items: center;
@@ -34,6 +36,7 @@
                     background-color: $colorMainBrightVeryLightBlue;
                     position: relative;
                     transition: ease all 0.25s;
+
                     .gitBox {
                         position: absolute;
                         right:0rem;
@@ -42,6 +45,7 @@
                         transition: ease all 0.25s;
                         height:100px;
                         background: $colorMainBrightTrueWhite;
+
                         div {
                             width:100px;
                             height:100px;
@@ -52,6 +56,7 @@
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
+
                             i{
                                 font-size: 3rem;
                                 color:$colorMainBrightLightBlue;
@@ -66,12 +71,14 @@
                         width:100%;
                         height:100%;
                         flex-direction: row-reverse;
+
                         .imgBox{
                             max-height: 100%;
                             min-height: 210px;
                             position: relative;
                             width:100%;
                             overflow: hidden;
+
                             img{
                                 position: absolute;
                                 object-fit:cover;
@@ -108,6 +115,7 @@
                         width:100%;
                         background-color: $colorMainBrightLightBlue;
                         box-shadow: -10px 0 $colorMainBrightDarkBlue;
+
                         .gitBox {
                             right:-7rem;
                         }
@@ -126,15 +134,18 @@
                     display:flex;
                     flex-direction: row;
                     justify-content: flex-start;
+
                     li{
                         align-self: center;
+
                         i{
                             font-size:2.5rem;
                             color:$colorDarkYellow;
                             margin:10px;                        
                         }
                     }
-                    .collabs{
+                    .collabs,
+                    .collabsOutside{
                         width:100%;
                         text-align: end;
                         display:flex;
@@ -142,12 +153,13 @@
                         align-items: flex-end;
                         margin-right:10%;
                         color:$colorMediumBlue;
+
                         a{
                             position:relative;
-                            // right:-112px;
                             font-weight: 600;
                             color:$colorDarkBlue;
                             display:block;
+
                             &::after{
                                 content: " - Visit Portfolio";
                                 color:$colorMainBrightDarkBlue;
@@ -165,7 +177,237 @@
                         }
                     }
                 }
+                .collabsOutside{
+                    display:none;
+                }
             }
         }
     }
+}
+
+@media (max-width: 1440px){
+    
+}
+
+@media (max-width:1080px){
+    .projectSect .wrapper .projectShowcaseContainer .projectClass{
+        .projectTopContainer{
+            width:100%;
+            height:100%;   
+            .gitBox {
+                right:-7rem;
+            }
+            a{
+                .imgBox{
+                    min-width: 50%;
+                    img{
+                        width: 100%;
+                        height:100%;
+                        object-fit:cover;
+                    }
+                }
+                .projectInfo{
+                    max-width:400px;
+                }
+            }
+        }
+        ul{
+            width:115%;
+            flex-direction: row-reverse;
+
+            li{
+                i{
+                    font-size:1.5rem;
+                }
+            }
+            .collabs{
+                text-align: start;
+                align-items: flex-start;
+                margin-right:0%;
+                width:100%;
+
+                a{
+                    &::after{
+                        content: "";
+                    }
+                    &::before{
+                        content:"Visit Portfolio - ";
+                        color:$colorMainBrightDarkBlue;
+                        font-weight: 300;
+                    }
+                    &:hover{
+                        &::after{
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+        
+@media (max-width:810px){
+    .projectSect .wrapper .projectShowcaseContainer .projectClass{
+        .projectTopContainer{ 
+            .gitBox {
+                right: 12%;
+                top: 65%;
+                margin:0rem;
+                background: $colorMainBrightVeryLightBlue;
+            }
+            a{
+                .imgBox{
+                    max-height:50%;
+                    // width:0;
+                    img{
+                        max-height: 50%;
+                        min-height:0;
+                    }
+                }
+            }
+            &:hover{
+                .gitBox{
+                    background: $colorMainBrightLightBlue;
+                    right:12%;
+                }
+            }
+        }
+        ul{
+            flex-direction: row;
+
+            li{
+                i{
+                    font-size:1.5rem;
+                }
+            }
+            .collabs{
+                text-align: start;
+                align-items: flex-end;
+                margin-right:0%;
+                width:100%;
+                a{
+                    &::after{
+                        content:"";
+                    }
+                    &::before{
+                        content:"";
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:700px){
+    .projectSect .wrapper .projectShowcaseContainer .projectClass{
+        flex-direction: row;
+        margin:2.5rem 0;
+        position:relative;
+
+        .projectTopContainer{
+            width:100%;
+
+            .gitBox {
+                position: absolute;
+                right:10px;
+                top:10px;
+                width:100px;
+
+                div {
+                    width:100px;
+                }
+            }
+
+            
+            a{
+                padding-right:100px;
+                flex-direction:column-reverse;
+
+                .imgBox{
+                    height:100%;
+                    max-height: 100%;
+                    width:100%;
+
+                    img{
+                        max-height: 100%;
+                        height:100%;
+                        width:100%;
+                        position: absolute;
+                        top:50;
+                        z-index: 10;
+                    }
+                }
+            }
+            &:hover{
+                .gitBox {
+                    right:10px;
+                }
+            }
+        }
+        ul{
+            position:absolute;
+            bottom:5%;
+            right:5%;
+            width:10%;
+            height:100%;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-content: flex-end;
+
+            li{
+                align-self: center;
+            }
+            .collabs{
+                display:none;
+            }
+        }
+        .collabsOutside{
+            position: absolute;
+            bottom:0;
+            left:0;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 75%;
+            color:$colorMediumBlue;
+            transition: ease all 0.2s;
+            padding-top:10%;
+            z-index: 0;
+            a{
+                position:relative;
+                font-weight: 600;
+                color:$colorDarkBlue;
+                display:block;
+        
+                &::after{
+                    content: " - Visit Portfolio";
+                    color:$colorMainBrightDarkBlue;
+                    font-weight: 300;
+                }
+                &:hover{
+                    &::after{
+                        left:50px;
+                        font-weight:600;
+                    }
+                    font-weight: 900;
+                    color:$colorMediumBlue;
+                    filter: drop-shadow(0 0 5px $colorDarkBlue);
+                }
+            }
+            &:hover{
+                bottom: -40px;
+            }
+        }
+        &:hover{
+            .collabsOutside{
+                bottom: -40px;
+            }
+            .collabsOutsideTall{
+                bottom:-80px;
+            }
+        }
+    }
+}
+
+@media (max-width:570px){
+
 }

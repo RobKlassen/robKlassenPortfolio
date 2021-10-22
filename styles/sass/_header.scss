@@ -4,12 +4,11 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .topNav{
         position:sticky;
         top:0;
@@ -27,8 +26,10 @@ header{
             flex-direction: row;
             justify-content: center;
             align-items: center;
+
             li{
                 padding: 0 4%;
+
                 a{
                     text-transform: uppercase;
                     font-weight: 600;
@@ -37,6 +38,7 @@ header{
                     border-bottom:2px solid $colorDarkBlue;
                     padding-top:10px;
                     padding-bottom:10px;
+
                     &:hover,
                     &:focus{
                         padding:0;
@@ -59,11 +61,13 @@ header{
             display:flex;
             justify-content: center;
             align-items: center;
+
             &:hover,
             &:focus{
                 transition: ease all 0.2s;
                 background-color: $colorSidebarBlack;
                 box-shadow: inset 0px 0px 35px 0px $colorYellow;
+
                 p{
                     color:$colorYellow;
                     filter: drop-shadow(0 0 5px $colorYellow);
@@ -86,9 +90,9 @@ header{
         flex-direction: column;
         justify-content: center;
         background-color: $colorDarkBlue;
+
         h3{
             font-variant: small-caps;
-            // text-transform: uppercase;
             color:$colorYellow;
             font-size:1rem;
             font-weight:300;
@@ -110,6 +114,74 @@ header{
             width:200px;
             height:50px;
             margin-top: 50px;
+        }
+    }
+}
+@media (max-width: 1440px){
+    
+}
+
+@media (max-width:1080px){
+
+}
+
+
+@media (max-width:700px){
+    header{
+        .topNav{
+            width:100%;
+            height:50px;
+            position:fixed;
+            left:0;
+            z-index: 80;
+
+            .mailMeBox{
+                width:10%;
+                height:50px;
+                transition: ease all 0.2s;
+
+                &:hover,
+                &:focus{
+                    width:75px;
+                    height:75px;
+                }
+                p{
+                    font-size:1rem;
+                }
+            }
+        }
+        .mainTextContainer{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 0;
+            width:66%;
+            height:calc(100vh - 200px);
+            justify-content: space-between;
+            align-items: center;
+
+            h1,
+            h2,
+            h3{
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width:570px){
+    header{
+        .topNav{
+            ul{
+                width:calc(90% - 50px);
+                justify-content: space-evenly;
+                align-items: space-evenly;
+                
+                li{ 
+                    &:last-child{
+                        display:none;
+                    }
+                }
+            }
         }
     }
 }
