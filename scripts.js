@@ -1,11 +1,6 @@
 const app = {};
 
 
-
-
-
-
-
 app.toggleClasses = function(target, classToAdd, classToRemove){
     target.classList.add(classToAdd);
     target.classList.remove(classToRemove);
@@ -162,11 +157,11 @@ app.moreCreditsButton = function(bool){
     moreCreditsToggle.addEventListener('click', function(e){
         e.preventDefault();
         if (toggle === false){
-            moreCreditsToggleID.innerText = "Hide Resources";
+            moreCreditsToggle.innerText = "Hide Resources";
             app.toggleClasses(moreCredits, "visible", "invisible");
             toggle = true;
         } else {
-            moreCreditsToggleID.innerText = "Show Resources Again";
+            moreCreditsToggle.innerText = "Show Resources Again";
             app.toggleClasses(moreCredits, "invisible", "visible");
             toggle = false;
         }
