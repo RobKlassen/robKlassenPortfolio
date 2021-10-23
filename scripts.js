@@ -92,6 +92,7 @@ app.slideOutHandler = function(slideoutState){
         console.log("you clicked it", slideOutToggle);
         slideOutToggle = !slideOutToggle
         app.slideOutHandler(slideOutToggle);
+        app.popUpForm(false);
     });
     if (slideOutToggle === true){
         app.toggleClasses(slideoutPage, "showSlideout", "hideSlideout");
@@ -137,17 +138,22 @@ app.popUpForm = function(visibilityBool){
     const mailMeBox = document.getElementById("mailMeBoxTopRight");
     const formOverlay = document.getElementById('popupForm');
     let visibility = visibilityBool;
-
-    mailMeBox.addEventListener('click', function(e){
-        e.preventDefault();
-        if (visibility === false){
+    
+    const checkVisibility = function(visibilityInFunc){
+        if (visibilityInFunc === false){
             app.toggleClasses(formOverlay, 'overlayJSClass', "invisible");
             visibility = true;
         } else {
             visibility = false;
             app.toggleClasses(formOverlay, 'invisible', 'overlayJSClass');
         }   
+    }
+
+    mailMeBox.addEventListener('click', function(e){
+        e.preventDefault();
+        checkVisibility(visibility);
     });
+    checkVisibility();
 }
 
 app.moreCreditsButton = function(bool){
@@ -169,6 +175,24 @@ app.moreCreditsButton = function(bool){
 
 }
 
+app.showPhoneNumber = function(){
+    const phoneNumber = document.getElementById('phoneNumber');
+    const numberText = phoneNumber.querySelector('p');
+    // const eventsToAdd =['focus', 'mouseenter'];
+    const eventsToAdd =['click', 'active'];
+
+    const handleAddEvent = function(eventToCheck){
+        phoneNumber.addEventListener(eventToCheck, function(e){
+            e.preventDefault();
+            numberText.innerText= "(905) 931 0432";
+        });   
+    }
+
+    eventsToAdd.forEach(check => {
+        handleAddEvent(check);
+    })
+}
+
 app.init = function(){
     app.slideOutHandler(false);
     app.projectListDropdownHandler();
@@ -176,6 +200,8 @@ app.init = function(){
     app.imageClick(1);
     app.popUpForm(false);
     app.moreCreditsButton(false);
+    app.showPhoneNumber();
+
 }
 
 app.init();
