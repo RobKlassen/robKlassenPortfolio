@@ -137,6 +137,7 @@ app.imageClick = function(cycle){
 app.popUpForm = function(visibilityBool){
     const mailMeBox = document.getElementById("mailMeBoxTopRight");
     const formOverlay = document.getElementById('popupForm');
+    const closeForm = document.getElementById('closePopupForm');
     let visibility = visibilityBool;
     
     const checkVisibility = function(visibilityInFunc){
@@ -153,6 +154,12 @@ app.popUpForm = function(visibilityBool){
         e.preventDefault();
         checkVisibility(visibility);
     });
+
+    closeForm.addEventListener('click', function(e){
+        e.preventDefault();
+        checkVisibility(visibility);
+    })
+
     checkVisibility();
 }
 

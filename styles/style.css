@@ -1866,6 +1866,16 @@ footer .wrapper .footerContainer .moreCredits p {
           justify-content: flex-start;
   padding: 20px;
 }
+.overlayJSClass #closePopupForm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: 4%;
+  height: 4%;
+  min-width: 45px;
+  min-height: 45px;
+}
 .overlayJSClass h3 {
   font-size: 2rem;
   color: #bbc3dc;
@@ -1960,6 +1970,11 @@ footer .wrapper .footerContainer .moreCredits p {
 @media (max-width: 700px) {
   .overlayJSClass {
     height: 80vh;
+  }
+  .overlayJSClass h3 {
+    -ms-flex-item-align: start;
+        align-self: start;
+    margin-right: 30px;
   }
   .overlayJSClass .topInputs .inputBox {
     -webkit-box-orient: vertical;
