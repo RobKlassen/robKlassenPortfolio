@@ -1059,7 +1059,7 @@ header .mainTextContainer h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #e8eefb;
+  background-color: #bbc3dc;
   position: relative;
   -webkit-transition: ease all 0.25s;
   transition: ease all 0.25s;
@@ -1106,7 +1106,6 @@ header .mainTextContainer h3 {
   background: #292f40;
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div:hover i {
-  font-size: 3.2rem;
   color: #fbc25e;
   -webkit-filter: drop-shadow(0 0 5px #fbc25e);
           filter: drop-shadow(0 0 5px #fbc25e);
@@ -1160,7 +1159,7 @@ header .mainTextContainer h3 {
 }
 .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover {
   width: 100%;
-  background-color: #bbc3dc;
+  background-color: #e8eefb;
   -webkit-box-shadow: -10px 0 #3d4761;
           box-shadow: -10px 0 #3d4761;
 }
@@ -1246,7 +1245,14 @@ header .mainTextContainer h3 {
     height: 100%;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox {
-    right: -7rem;
+    right: -5.25rem;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div {
+    width: 75px;
+    height: 75px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div i {
+    font-size: 2rem;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox {
     min-width: 50%;
@@ -1259,6 +1265,9 @@ header .mainTextContainer h3 {
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .projectInfo {
     max-width: 400px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover .gitBox {
+    right: -5.25rem;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass ul {
     width: 115%;
@@ -1292,7 +1301,14 @@ header .mainTextContainer h3 {
     right: 12%;
     top: 65%;
     margin: 0rem;
-    background: #e8eefb;
+    background: #bbc3dc;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div {
+    width: 100px;
+    height: 100px;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer .gitBox div i {
+    font-size: 3rem;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer a .imgBox {
     max-height: 50%;
@@ -1302,7 +1318,7 @@ header .mainTextContainer h3 {
     min-height: 0;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer:hover .gitBox {
-    background: #bbc3dc;
+    background: #e8eefb;
     right: 12%;
     z-index: 50;
   }
@@ -1336,7 +1352,7 @@ header .mainTextContainer h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 3.5rem 0;
     position: relative;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .projectTopContainer {
@@ -1379,7 +1395,7 @@ header .mainTextContainer h3 {
     bottom: 5%;
     right: 5%;
     width: 10%;
-    height: 100%;
+    height: 50%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1399,7 +1415,7 @@ header .mainTextContainer h3 {
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside {
     position: absolute;
-    bottom: 0;
+    top: 100%;
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1411,11 +1427,10 @@ header .mainTextContainer h3 {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: 75%;
+    width: 100%;
     color: #292f40;
     -webkit-transition: ease all 0.2s;
     transition: ease all 0.2s;
-    padding-top: 10%;
     z-index: 0;
   }
   .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a {
@@ -1438,15 +1453,6 @@ header .mainTextContainer h3 {
   .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a:hover::after {
     left: 50px;
     font-weight: 600;
-  }
-  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside:hover {
-    bottom: -40px;
-  }
-  .projectSect .wrapper .projectShowcaseContainer .projectClass:hover .collabsOutside {
-    bottom: -40px;
-  }
-  .projectSect .wrapper .projectShowcaseContainer .projectClass:hover .collabsOutsideTall {
-    bottom: -80px;
   }
 }
 .contactSect {
