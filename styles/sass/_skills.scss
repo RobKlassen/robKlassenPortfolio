@@ -44,6 +44,8 @@
                 flex-direction: row;
                 flex-wrap: wrap;
 
+                // transition: ease all 0.2s;
+
                 .iconPair{
                     flex:1 0 auto;
                     display:flex;
@@ -51,6 +53,8 @@
                     align-items: center;
                     width:10%;
                     margin:5%;
+
+
 
                     p{
                         margin-top:1vw;
@@ -60,6 +64,7 @@
                         i{
                             font-size:3.5vw;
                             color:$colorYellow;
+                            transition: ease all 0.2s;
                         }
                     }
                 }

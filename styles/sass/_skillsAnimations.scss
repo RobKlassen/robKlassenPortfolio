@@ -1,0 +1,97 @@
+.skillSect .skillContainer .skillIconContainer ul{
+    &:hover{
+        .iconPair{
+            animation-name: scaleAnimation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            // animation-delay: 1s;
+            p{
+                i{
+                }
+            }
+            &:hover{
+                p{
+                    i{
+                        filter: drop-shadow(0 0 6px $colorMainBrightVeryLightBlue);
+                        color:$colorMainBrightVeryLightBlue;
+                    }
+                }
+            }
+        }
+        .icAnim0{animation-delay: 0s;}
+        .icAnim1{animation-delay: 0.1s;}
+        .icAnim2{animation-delay: 0.2s;}
+        .icAnim3{animation-delay: 0.3s;}
+        .icAnim4{animation-delay: 0.4s;}
+        .icAnim5{animation-delay: 0s;}
+        .icAnim6{animation-delay: 0.1s;}
+        .icAnim7{animation-delay: 0.2s;}
+        .icAnim8{animation-delay: 0.3s;}
+        .icAnim9{animation-delay: 0.4s;}
+    }
+}
+        
+@media (max-width:1080px){
+    .skillSect .skillContainer .skillIconContainer ul{
+        &:hover{
+            .icAnim0{animation-delay: 0s;}
+            .icAnim1{animation-delay: 0s;}
+            .icAnim2{animation-delay: 0s;}
+            .icAnim3{animation-delay: 0s;}
+            .icAnim4{animation-delay: 0.2s;}
+            .icAnim5{animation-delay: 0.2s;}
+            .icAnim6{animation-delay: 0.2s;}
+            .icAnim7{animation-delay: 0.2s;}
+            .icAnim8{animation-delay: 0.4s;}
+            .icAnim9{animation-delay: 0.4s;}
+        }
+    }
+}
+
+@media (max-width:700px){
+    .skillSect .skillContainer .skillIconContainer ul{
+        &:hover{
+            .icAnim0{animation-delay: 0s;}
+            .icAnim1{animation-delay: 0s;}
+            .icAnim2{animation-delay: 0s;}
+            .icAnim3{animation-delay: 0s;}
+            .icAnim4{animation-delay: 0.2s;}
+            .icAnim5{animation-delay: 0.2s;}
+            .icAnim6{animation-delay: 0.2s;}
+            .icAnim7{animation-delay: 0.2s;}
+            .iconPair.icAnim8{animation-name: translateAnimation;}
+            .iconPair.icAnim9{animation-name: wobbleAnimation;}
+        }
+    }
+}
+
+
+@keyframes scaleAnimation{
+    25%{
+        transform: scale(90%,90%);
+    }
+        66%{
+    }
+}
+@keyframes translateAnimation{
+    0%{
+        transform: translateX(0%);
+    }
+    33%{
+        transform: translateX(5%);
+    }
+    66%{
+        transform: translateX(-5%);
+    }
+}
+@keyframes wobbleAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(5deg);
+    }
+    66%{
+        transform: rotate(-5deg);
+    }
+}

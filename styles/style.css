@@ -956,6 +956,8 @@ header .mainTextContainer h3 {
 .skillSect .skillContainer .skillIconContainer ul .iconPair p i {
   font-size: 3.5vw;
   color: #fbc25e;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
 }
 
 @media (max-width: 1080px) {
@@ -995,6 +997,212 @@ header .mainTextContainer h3 {
     position: relative;
     top: -50%;
     color: #fbc25e;
+  }
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .iconPair {
+  -webkit-animation-name: scaleAnimation;
+          animation-name: scaleAnimation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .iconPair:hover p i {
+  -webkit-filter: drop-shadow(0 0 6px #e8eefb);
+          filter: drop-shadow(0 0 6px #e8eefb);
+  color: #e8eefb;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim5 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim6 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim7 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim8 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.skillSect .skillContainer .skillIconContainer ul:hover .icAnim9 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@media (max-width: 1080px) {
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim0 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim1 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim2 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim3 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim4 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim6 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim7 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim8 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim9 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+}
+@media (max-width: 700px) {
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim0 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim1 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim2 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim3 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim4 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim6 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .icAnim7 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .iconPair.icAnim8 {
+    -webkit-animation-name: translateAnimation;
+            animation-name: translateAnimation;
+  }
+  .skillSect .skillContainer .skillIconContainer ul:hover .iconPair.icAnim9 {
+    -webkit-animation-name: wobbleAnimation;
+            animation-name: wobbleAnimation;
+  }
+}
+@-webkit-keyframes scaleAnimation {
+  25% {
+    -webkit-transform: scale(90%, 90%);
+            transform: scale(90%, 90%);
+  }
+}
+@keyframes scaleAnimation {
+  25% {
+    -webkit-transform: scale(90%, 90%);
+            transform: scale(90%, 90%);
+  }
+}
+@-webkit-keyframes translateAnimation {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  33% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  66% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+}
+@keyframes translateAnimation {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  33% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  66% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+}
+@-webkit-keyframes wobbleAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  66% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@keyframes wobbleAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  66% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
 }
 .projectSect .wrapper {
@@ -1235,6 +1443,10 @@ header .mainTextContainer h3 {
   left: 50px;
   font-weight: 600;
 }
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a.portfolioComingSoon::after,
+.projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabsOutside a.portfolioComingSoon::after {
+  content: " - Coming Soon";
+}
 .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside {
   display: none;
 }
@@ -1294,6 +1506,22 @@ header .mainTextContainer h3 {
     content: "Visit Portfolio - ";
     color: #3d4761;
     font-weight: 300;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a:hover {
+    font-weight: 900;
+    color: #292f40;
+    -webkit-filter: drop-shadow(0 0 5px #191d28);
+            filter: drop-shadow(0 0 5px #191d28);
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a:hover::before {
+    right: 50px;
+    font-weight: 600;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a.portfolioComingSoon::before {
+    content: "Coming Soon - ";
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass ul .collabs a.portfolioComingSoon::after {
+    content: "";
   }
 }
 @media (max-width: 810px) {
@@ -1453,6 +1681,12 @@ header .mainTextContainer h3 {
   .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a:hover::after {
     left: 50px;
     font-weight: 600;
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a.portfolioComingSoon::before {
+    content: "";
+  }
+  .projectSect .wrapper .projectShowcaseContainer .projectClass .collabsOutside a.portfolioComingSoon::after {
+    content: " - Coming Soon";
   }
 }
 .contactSect {

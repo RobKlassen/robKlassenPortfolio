@@ -185,6 +185,11 @@
                                 filter: drop-shadow(0 0 5px $colorDarkBlue);
                             }
                         }
+                        a.portfolioComingSoon{
+                            &::after{
+                                content: " - Coming Soon";
+                            }
+                        }
                     }
                 }
                 .collabsOutside{
@@ -258,8 +263,21 @@
                         font-weight: 300;
                     }
                     &:hover{
-                        &::after{
+                        &::before{
+                            right:50px;
+                            font-weight:600;
                         }
+                        font-weight: 900;
+                        color:$colorMediumBlue;
+                        filter: drop-shadow(0 0 5px $colorDarkBlue);
+                    }
+                }
+                a.portfolioComingSoon{
+                    &::before{
+                        content: "Coming Soon - ";
+                    }
+                    &::after{
+                        content:"";
                     }
                 }
             }
@@ -421,6 +439,14 @@
                     font-weight: 900;
                     color:$colorMediumBlue;
                     filter: drop-shadow(0 0 5px $colorDarkBlue);
+                }
+            }
+            a.portfolioComingSoon{
+                &::before{
+                    content: "";
+                }
+                &::after{
+                    content:" - Coming Soon";
                 }
             }
         }
