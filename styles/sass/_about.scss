@@ -1,21 +1,26 @@
 .aboutSect{
+    position: relative;
+    overflow: hidden;
+
     .aboutContainer{
         margin: 10% 0;
         display:flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        // position: relative;
+
         .imageContainer{
             position: relative;
             height:100%;
             width:30%;
+
             .backers{
                 position: absolute;
                 width:100%;
                 height:100%;
                 justify-self: center;
                 align-self: center;
+
                 .imgbackerLeft,
                 .imgbackerRight,
                 .imgbackerBottom{
@@ -23,7 +28,7 @@
                     margin:10%;
                     width:80%;
                     height:80%;   
-                    z-index: 0;
+                    z-index: 5;
                     border-radius: 2px;
                 }
                 .imgbackerLeft{
@@ -48,13 +53,13 @@
                 z-index: 10;
                 width:100%;
                 height:100%;
-                border-radius: 3px;
-                // opacity: 50%;
-        
+                border-radius: 3px;        
             }
         }
         .aboutMeContainer{
+            z-index: 10;
             width:60%;
+
             .aboutMeText{
                 h2,
                 p{
@@ -81,19 +86,30 @@
                 }
             }
             a {
-
                 button{
                     width:200px;
                     height:50px;
                     margin-top: 50px;
+                    cursor: pointer;
                 }
             }
         }
     }
-}
+    .animatedBar{
+        position: absolute;
+        top:-25%;
+        right:0;
+        width:20%;
+        height:150%;
+        background: linear-gradient(105deg, $colorMainBrightLightBlue 10%, $colorMainBrightVeryLightBlue 50%, $colorMainBrightLightBlue 90%);
+        clip-path: polygon(55% 0%, 100% 0%, 45% 100%, 0% 100%);
+        animation-name: barSweep;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        opacity: 0;
+        z-index: 0;
 
-@media (max-width: 1440px){
-    
+    }
 }
 
 @media (max-width:1080px){
@@ -133,10 +149,10 @@
     }
 }
 
-@media (max-width:700px){
-    
-}
-
-@media (max-width:570px){
-
+@keyframes barSweep {
+    0%{transform: translateX(100%); opacity:1;}    
+    50%{transform: translateX(-500%); opacity:1;}
+    51%{opacity:0;}        
+    60%{transform: translateX(200%);}
+    98%{opacity: 0;}       
 }

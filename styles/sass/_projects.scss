@@ -150,7 +150,7 @@
 
                         i{
                             font-size:2.5rem;
-                            color:$colorDarkYellow;
+                            color:$colorTextSecondaryBlue;
                             margin:10px;                        
                         }
                     }
@@ -194,6 +194,23 @@
                 }
                 .collabsOutside{
                     display:none;
+                }
+                &:hover{
+                    ul{    
+                        .icAnim0,
+                        .icAnim1,
+                        .icAnim2,
+                        .icAnim3,
+                        .icAnim4{
+                            animation-name: skillSweep;
+                            animation-duration: 1s;
+                        }
+                        .icAnim0{animation-delay: 0s;}
+                        .icAnim1{animation-delay: 0.1s;}
+                        .icAnim2{animation-delay: 0.2s;}
+                        .icAnim3{animation-delay: 0.3s;}
+                        .icAnim4{animation-delay: 0.4s;}
+                    }
                 }
             }
         }
@@ -453,6 +470,10 @@
     }
 }
 
-@media (max-width:570px){
-
+@keyframes skillSweep {
+    0%{ transform: translateX(0px); }
+    25%{ transform: translateX(10px); }
+    50%{ transform: translateX(0px); }
+    // 75%{ transform: translateX(-10px); }
+    // 100%{ transform: translateX(0px); }
 }

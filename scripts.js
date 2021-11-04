@@ -71,7 +71,6 @@ app.projectListDropdownHandler = function(){
             } else {
                 option.classList.remove('nestedMenu');
                 option.addEventListener('click', function(){
-                    console.log("this has no menu");
                     app.slideOutHandler(false);
                 })
             }
@@ -89,7 +88,6 @@ app.slideOutHandler = function(slideoutState){
     const slideoutPage = document.querySelector("#sideNavSlideout");
 
     slideoutButton.addEventListener('click', function(){
-        console.log("you clicked it", slideOutToggle);
         slideOutToggle = !slideOutToggle
         app.slideOutHandler(slideOutToggle);
         app.popUpForm(false);
@@ -208,7 +206,6 @@ app.init = function(){
     app.popUpForm(false);
     app.moreCreditsButton(false);
     app.showPhoneNumber();
-
 }
 
 app.init();
